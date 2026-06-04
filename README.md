@@ -1,6 +1,8 @@
 # Tarot Oracle
 
-**Authors:** Sascha Mücke & OpenAI Codex (GPT-5.5)
+**Authors:** Sascha Mücke & OpenAI Codex (GPT-5.5), 2026
+
+![UI](UI.jpg)
 
 Tarot Oracle is a small FastAPI web app for performing card readings with an LLM. It shows a top-down spread of cards, lets the user choose cards manually or generate a random spread, accepts a free-form question or situation prompt, and streams back a spoken-style oracle reading with a visual certainty rating.
 
