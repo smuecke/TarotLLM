@@ -1,0 +1,23 @@
+[spread]
+id = "past-present-future"
+name = "Past, Present & Future"
+description = "Three cards representing past, present, and future in its most basic interpretation, but can also be interpreted as aspects or forces whose influence is decreasing, currently at its peak, and increasing respectively."
+order = 10
+
+[slots.past]
+name = "Past"
+x = 28
+y = 49
+role = "The past, a waning aspect, a force whose influence is decreasing."
+
+[slots.present]
+name = "Present"
+x = 50
+y = 49
+role = "The present, a force whose influence is currently dominating."
+
+[slots.future]
+name = "Future"
+x = 72
+y = 49
+role = "The future, a waxing aspect, a force whose influence is increasing."

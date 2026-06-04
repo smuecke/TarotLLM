@@ -1,0 +1,36 @@
+[spread]
+id = "relationship-mirror"
+name = "Relationship Mirror"
+description = "A five-card spread for two sides of a relationship or dynamic, the bond between them, the hidden weather, and the next movement."
+order = 30
+
+[slots.you]
+name = "You"
+x = 30
+y = 45
+role = "The querent's side of the relationship, their stance, need, projection, or contribution."
+
+[slots.other]
+name = "Other"
+x = 70
+y = 45
+role = "The other person's side, or the opposing force's stance, need, projection, or contribution."
+
+[slots.bond]
+name = "Bond"
+x = 50
+y = 45
+role = "The connection itself, what is created between the two sides."
+
+[slots.hidden]
+name = "Hidden"
+x = 50
+y = 22
+role = "The hidden weather, unspoken influence, unconscious pattern, or unseen emotional condition."
+
+[slots.next]
+name = "Next"
+x = 50
+y = 72
+role = "The next movement, actionable development, or near-term direction of the dynamic."
+

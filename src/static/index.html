@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tarot Oracle</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="table" aria-label="Tarot spread workspace">
+        <header class="topbar">
+          <div>
+            <h1>Tarot Oracle</h1>
+            <p id="spreadHint">Choose a spread, set the cards, and ask.</p>
+          </div>
+          <div class="controls">
+            <label>
+              <span>Spread</span>
+              <select id="spreadSelect"></select>
+            </label>
+            <button id="randomButton" type="button">Random</button>
+            <button id="clearButton" type="button">Clear</button>
+          </div>
+        </header>
+
+        <div id="spreadBoard" class="spread-board" aria-live="polite"></div>
+
+        <form id="oracleForm" class="oracle-panel">
+          <textarea
+            id="promptInput"
+            rows="4"
+            placeholder="Describe the situation or ask the oracle a question..."
+          ></textarea>
+          <div class="panel-actions">
+            <div class="certainty" aria-label="Certainty rating">
+              <span>Certainty</span>
+              <div id="certaintyDots" class="certainty-dots">
+                <i></i><i></i><i></i><i></i>
+              </div>
+            </div>
+            <button id="submitButton" type="submit">Ask Oracle</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="reading-pane" aria-label="Oracle reading">
+        <div class="reading-title">
+          <span>Reading</span>
+          <button id="copyButton" type="button">Copy</button>
+        </div>
+        <article id="readingOutput">
+          <p class="muted">The reading will appear here as the oracle speaks.</p>
+        </article>
+      </aside>
+    </main>
+
+    <dialog id="cardPicker" class="card-picker">
+      <div class="picker-shell">
+        <header class="picker-head">
+          <div>
+            <span id="pickerPosition">Choose card</span>
+            <h2 id="pickerTitle">Deck</h2>
+          </div>
+          <button id="pickerClose" type="button" aria-label="Close">Close</button>
+        </header>
+        <input id="pickerSearch" type="search" placeholder="Search cards or tags..." />
+        <div id="pickerGrid" class="picker-grid"></div>
+      </div>
+    </dialog>
+
+    <script src="/static/app.js" type="module"></script>
+  </body>
+</html>

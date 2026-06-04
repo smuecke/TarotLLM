@@ -1,0 +1,633 @@
+[deck]
+id = "rider-waite-tarot"
+name = "Rider-Waite Tarot"
+language = "English"
+description = "Default 78-card Tarot deck for the Tarot Oracle app."
+image_base = "/img"
+back_image = "/img/back.jpg"
+
+[tags.major]
+label = "Major Arcana"
+context = """Large archetypal forces, initiations, life passages, and themes that feel bigger than daily habit."""
+
+[tags.minor]
+label = "Minor Arcana"
+context = """Everyday choices, pressures, relationships, tasks, and practical situations where the archetype becomes lived experience."""
+
+[tags.wands]
+label = "Wands"
+context = """Fire, will, vitality, ambition, courage, conflict, creativity, and the impulse to act."""
+
+[tags.cups]
+label = "Cups"
+context = """Water, feeling, intuition, attachment, grief, care, desire, and emotional exchange."""
+
+[tags.swords]
+label = "Swords"
+context = """Air, thought, truth, language, anxiety, conflict, discernment, and difficult clarity."""
+
+[tags.pentacles]
+label = "Pentacles"
+context = """Earth, body, work, money, home, craft, resources, patience, and material consequence."""
+
+[tags.ace]
+label = "Ace"
+context = """Origin, seed, gift, beginning, raw potential, and concentrated force."""
+
+[tags.two]
+label = "Two"
+context = """Duality, choice, balance, reflection, partnership, and divided attention."""
+
+[tags.three]
+label = "Three"
+context = """Growth, expression, collaboration, emergence, and first visible results."""
+
+[tags.four]
+label = "Four"
+context = """Structure, stability, containment, foundation, limits, and the comfort or trap of order."""
+
+[tags.five]
+label = "Five"
+context = """Friction, loss, instability, conflict, challenge, and the demand to adapt."""
+
+[tags.six]
+label = "Six"
+context = """Repair, exchange, movement, memory, generosity, and a return toward proportion."""
+
+[tags.seven]
+label = "Seven"
+context = """Testing, strategy, defense, temptation, perseverance, and inner examination."""
+
+[tags.eight]
+label = "Eight"
+context = """Momentum, discipline, repetition, consequence, practice, and practical movement."""
+
+[tags.nine]
+label = "Nine"
+context = """Culmination, resilience, solitude, satisfaction, intensity, and nearly completed work."""
+
+[tags.ten]
+label = "Ten"
+context = """Completion, saturation, burden, legacy, inheritance, and the turn into a new cycle."""
+
+[tags.page]
+label = "Page"
+context = """Curiosity, study, messages, beginnings, and inexperienced openness."""
+
+[tags.knight]
+label = "Knight"
+context = """Movement, pursuit, service, temperament in action, and the questing form of a theme."""
+
+[tags.queen]
+label = "Queen"
+context = """Receptivity, protection, maturity, inner authority, and sustaining mastery."""
+
+[tags.king]
+label = "King"
+context = """Command, responsibility, outward authority, mature direction, and accountable power."""
+
+[cards.fool]
+name = "The Fool"
+image = "fool.jpg"
+tags = ["major"]
+visual = """A carefree traveler steps toward a cliff with a small bundle, a white flower, a bright sky, and a little dog at their heels."""
+meaning = """A threshold opens before certainty arrives. The theme is trust, risk, innocence, and the first step into an unknown path."""
+
+[cards.magician]
+name = "The Magician"
+image = "magician.jpg"
+tags = ["major"]
+visual = """A focused figure stands before an altar holding the tools of the four suits, one hand raised to heaven and one pointing to earth."""
+meaning = """Focused will can shape available resources. The theme is agency, skill, manifestation, and conscious direction."""
+
+[cards.highpriestess]
+name = "The High Priestess"
+image = "highpriestess.jpg"
+tags = ["major"]
+visual = """A veiled guardian sits between dark and light pillars, holding a scroll before a curtain of hidden pomegranates."""
+meaning = """Not all knowledge is ready to be spoken. The theme is intuition, secrecy, patience, and inner listening."""
+
+[cards.empress]
+name = "The Empress"
+image = "empress.jpg"
+tags = ["major"]
+visual = """A crowned woman sits amid grain, trees, cushions, and flowing water, surrounded by signs of fertility and embodied comfort."""
+meaning = """Life wants nourishment and room to grow. The theme is care, embodiment, abundance, creativity, and sensual wisdom."""
+
+[cards.emperor]
+name = "The Emperor"
+image = "emperor.jpg"
+tags = ["major"]
+visual = """A stern ruler sits on a stone throne marked with rams, armored beneath red robes and backed by austere mountains."""
+meaning = """Structure can protect what feeling alone cannot hold. The theme is authority, boundaries, order, and responsibility."""
+
+[cards.hierophant]
+name = "The Hierophant"
+image = "hierophant.jpg"
+tags = ["major"]
+visual = """A spiritual teacher raises a blessing between pillars while two attendants kneel before crossed keys."""
+meaning = """A situation is shaped by tradition, teaching, vows, or inherited values. The theme is guidance, ritual, and belonging."""
+
+[cards.lovers]
+name = "The Lovers"
+image = "lovers.jpg"
+tags = ["major"]
+visual = """Two naked figures stand beneath an angel, with a mountain and two trees framing a charged moment of union and choice."""
+meaning = """Desire asks to be joined with an honest choice. The theme is union, values, attraction, consent, and alignment."""
+
+[cards.chariot]
+name = "The Chariot"
+image = "chariot.jpg"
+tags = ["major"]
+visual = """A crowned rider stands in a square chariot pulled by opposing sphinxes, holding direction through will rather than reins."""
+meaning = """Opposing forces can move together when purpose is clear. The theme is discipline, direction, victory, and self-command."""
+
+[cards.strength]
+name = "Strength"
+image = "strength.jpg"
+tags = ["major"]
+visual = """A calm figure gently closes the mouth of a lion, crowned by an infinity sign and surrounded by quiet light."""
+meaning = """Gentleness can be stronger than force. The theme is courage, restraint, compassion, and taming instinct without shame."""
+
+[cards.hermit]
+name = "The Hermit"
+image = "hermit.jpg"
+tags = ["major"]
+visual = """An elder stands alone on a high cold path, holding a lantern with a star inside and a staff for support."""
+meaning = """The answer may require solitude and a slower lamp. The theme is withdrawal, study, guidance, and earned wisdom."""
+
+[cards.wheeloffortune]
+name = "Wheel of Fortune"
+image = "wheeloffortune.jpg"
+tags = ["major"]
+visual = """A great wheel turns among winged guardians, symbols, and rising or falling figures that show motion beyond control."""
+meaning = """Circumstances are turning, and timing matters. The theme is fate, cycles, chance, reversal, and adaptation."""
+
+[cards.justice]
+name = "Justice"
+image = "justice.jpg"
+tags = ["major"]
+visual = """A seated figure holds scales and an upright sword, framed by pillars and a veil of sober judgment."""
+meaning = """Truth and consequence must be weighed cleanly. The theme is fairness, accountability, decision, and moral clarity."""
+
+[cards.hangedman]
+name = "The Hanged Man"
+image = "hangedman.jpg"
+tags = ["major"]
+visual = """A suspended figure hangs upside down from a living beam, one leg crossed and a halo around the head."""
+meaning = """Progress may come through surrender rather than action. The theme is pause, sacrifice, perspective, and release."""
+
+[cards.death]
+name = "Death"
+image = "death.jpg"
+tags = ["major"]
+visual = """A skeletal rider on a white horse passes through a landscape of fallen and kneeling figures beneath a distant sun."""
+meaning = """An old form is ending so another can emerge. The theme is transformation, closure, grief, and necessary change."""
+
+[cards.temperance]
+name = "Temperance"
+image = "temperance.jpg"
+tags = ["major"]
+visual = """An angel stands with one foot on land and one in water, pouring liquid between cups with patient precision."""
+meaning = """Healing comes through mixture, moderation, and patience. The theme is balance, integration, timing, and calm repair."""
+
+[cards.devil]
+name = "The Devil"
+image = "devil.jpg"
+tags = ["major"]
+visual = """A horned figure looms over two loosely chained people, with fire, shadow, and temptation arranged like a false altar."""
+meaning = """A bond may be fed by fear, appetite, shame, or false necessity. The theme is attachment, temptation, shadow, and liberation."""
+
+[cards.tower]
+name = "The Tower"
+image = "tower.jpg"
+tags = ["major"]
+visual = """Lightning strikes a high tower, throwing crowned figures into the dark as fire breaks from the shattered crown."""
+meaning = """A false structure is breaking open. The theme is shock, revelation, collapse, and the freedom that follows truth."""
+
+[cards.star]
+name = "The Star"
+image = "star.jpg"
+tags = ["major"]
+visual = """A naked figure pours water onto earth and pool beneath a large star and seven smaller stars."""
+meaning = """Hope returns after exposure or difficulty. The theme is renewal, trust, vulnerability, guidance, and spiritual refreshment."""
+
+[cards.moon]
+name = "The Moon"
+image = "moon.jpg"
+tags = ["major"]
+visual = """A moonlit path winds between towers past a dog, a wolf, and a crayfish rising from dark water."""
+meaning = """The path is real but half-lit. The theme is uncertainty, dream, fear, projection, instinct, and intuitive navigation."""
+
+[cards.sun]
+name = "The Sun"
+image = "sun.jpg"
+tags = ["major"]
+visual = """A radiant child rides beneath a blazing sun, with sunflowers and an open wall behind them."""
+meaning = """Clarity, warmth, and vitality are available. The theme is joy, visibility, success, honesty, and simple life."""
+
+[cards.judgement]
+name = "Judgement"
+image = "judgement.jpg"
+tags = ["major"]
+visual = """Figures rise from coffins as an angel sounds a trumpet, calling them into awakening and response."""
+meaning = """A call is sounding that cannot be unheard. The theme is awakening, reckoning, forgiveness, and response."""
+
+[cards.world]
+name = "The World"
+image = "world.jpg"
+tags = ["major"]
+visual = """A dancing figure moves within a wreath, surrounded by the four living creatures at the corners."""
+meaning = """A cycle reaches integration. The theme is completion, wholeness, arrival, embodiment, and readiness for a new turn."""
+
+[cards.wands-ace]
+name = "Ace of Wands"
+image = "wands-ace.jpg"
+tags = ["minor", "wands", "ace"]
+visual = """A hand emerges from a cloud holding a budding wand over a bright landscape and distant castle."""
+meaning = """A new creative or spiritual impulse is being offered. It asks for courage, ignition, and a first act before the fire fades."""
+
+[cards.wands-two]
+name = "Two of Wands"
+image = "wands-two.jpg"
+tags = ["minor", "wands", "two"]
+visual = """A figure holds a globe from a battlement, one wand fixed behind them and one in hand as they look outward."""
+meaning = """Desire has outgrown the current wall. Planning, ambition, and the tension between security and expansion are central."""
+
+[cards.wands-three]
+name = "Three of Wands"
+image = "wands-three.jpg"
+tags = ["minor", "wands", "three"]
+visual = """A figure stands on a cliff with three wands, watching ships move across golden water."""
+meaning = """The first step has been taken and now results are moving at a distance. It favors foresight, waiting, and wider horizons."""
+
+[cards.wands-four]
+name = "Four of Wands"
+image = "wands-four.jpg"
+tags = ["minor", "wands", "four"]
+visual = """Four wands form a garlanded threshold before celebrants and a distant home or town."""
+meaning = """Energy seeks celebration, welcome, and a stable threshold. It can mark homecoming, shared joy, or a protected pause."""
+
+[cards.wands-five]
+name = "Five of Wands"
+image = "wands-five.jpg"
+tags = ["minor", "wands", "five"]
+visual = """Five youths raise wands in chaotic contest, practice, or disagreement without a single clear victor."""
+meaning = """Vitality is tangled in competition or noisy disagreement. The card asks whether conflict is training, waste, or honest difference."""
+
+[cards.wands-six]
+name = "Six of Wands"
+image = "wands-six.jpg"
+tags = ["minor", "wands", "six"]
+visual = """A laurel-crowned rider carries a decorated wand through a crowd in a public moment of recognition."""
+meaning = """Effort receives public recognition. Victory is possible, but the card also asks how praise is carried and shared."""
+
+[cards.wands-seven]
+name = "Seven of Wands"
+image = "wands-seven.jpg"
+tags = ["minor", "wands", "seven"]
+visual = """A figure on higher ground defends a position against six wands rising from below."""
+meaning = """A position must be defended from pressure. The card favors courage, boundaries, and knowing what ground is truly worth holding."""
+
+[cards.wands-eight]
+name = "Eight of Wands"
+image = "wands-eight.jpg"
+tags = ["minor", "wands", "eight"]
+visual = """Eight wands fly swiftly through open air toward a green landscape and river."""
+meaning = """Events accelerate. Messages, travel, momentum, and rapid alignment are likely, leaving little room for hesitation."""
+
+[cards.wands-nine]
+name = "Nine of Wands"
+image = "wands-nine.jpg"
+tags = ["minor", "wands", "nine"]
+visual = """A bandaged figure grips one wand while eight stand behind, guarded and not yet defeated."""
+meaning = """The figure is tired but not broken. Persistence, guardedness, and old wounds shape the next decision."""
+
+[cards.wands-ten]
+name = "Ten of Wands"
+image = "wands-ten.jpg"
+tags = ["minor", "wands", "ten"]
+visual = """A burdened figure carries ten heavy wands toward a town, almost there but bent by the load."""
+meaning = """A burden has become too heavy or too solitary. Completion is near, but the method of carrying it needs revision."""
+
+[cards.wands-page]
+name = "Page of Wands"
+image = "wands-page.jpg"
+tags = ["minor", "wands", "page"]
+visual = """A youthful figure studies a sprouting wand in a dry landscape, alert to a new impulse."""
+meaning = """A fresh spark wants experiment. Curiosity, news, study, and playful courage matter more than mastery."""
+
+[cards.wands-knight]
+name = "Knight of Wands"
+image = "wands-knight.jpg"
+tags = ["minor", "wands", "knight"]
+visual = """An armored rider charges through a hot landscape, wand raised and horse in motion."""
+meaning = """Fire is in motion. The card brings pursuit, impatience, adventure, charisma, and the risk of rushing past wisdom."""
+
+[cards.wands-queen]
+name = "Queen of Wands"
+image = "wands-queen.jpg"
+tags = ["minor", "wands", "queen"]
+visual = """A crowned figure holds a sunflower and wand, seated with lions and a black cat nearby."""
+meaning = """Warm authority works through confidence, generosity, and instinct. The card favors creative sovereignty and magnetic presence."""
+
+[cards.wands-king]
+name = "King of Wands"
+image = "wands-king.jpg"
+tags = ["minor", "wands", "king"]
+visual = """A crowned ruler sits with a flowering wand, salamander symbols, and a posture of fiery command."""
+meaning = """Vision wants leadership. The card emphasizes mature fire, bold decisions, responsibility, and the power to direct energy."""
+
+[cards.cups-ace]
+name = "Ace of Cups"
+image = "cups-ace.jpg"
+tags = ["minor", "cups", "ace"]
+visual = """A hand offers an overflowing cup beneath a dove, with water pouring into a pool of lilies."""
+meaning = """The heart opens. New feeling, compassion, forgiveness, love, or spiritual receptivity is available as a living source."""
+
+[cards.cups-two]
+name = "Two of Cups"
+image = "cups-two.jpg"
+tags = ["minor", "cups", "two"]
+visual = """Two figures exchange cups beneath a winged lion and caduceus, meeting face to face."""
+meaning = """Two presences meet in mutual recognition. Partnership, repair, attraction, and emotional reciprocity are central."""
+
+[cards.cups-three]
+name = "Three of Cups"
+image = "cups-three.jpg"
+tags = ["minor", "cups", "three"]
+visual = """Three figures raise cups together in a dance of harvest, friendship, and shared feeling."""
+meaning = """Feeling becomes communal. Friendship, celebration, support, and shared joy help the situation breathe."""
+
+[cards.cups-four]
+name = "Four of Cups"
+image = "cups-four.jpg"
+tags = ["minor", "cups", "four"]
+visual = """A seated figure folds their arms beneath a tree while a cloud offers a cup and three cups wait below."""
+meaning = """The heart is withdrawn or saturated. An offer may be missed because attention is turned inward or dulled by disappointment."""
+
+[cards.cups-five]
+name = "Five of Cups"
+image = "cups-five.jpg"
+tags = ["minor", "cups", "five"]
+visual = """A cloaked figure mourns three spilled cups while two upright cups remain behind them near a bridge."""
+meaning = """Grief is foregrounded, but not everything is lost. The card asks for mourning without forgetting what remains upright."""
+
+[cards.cups-six]
+name = "Six of Cups"
+image = "cups-six.jpg"
+tags = ["minor", "cups", "six"]
+visual = """A child offers a flower-filled cup to another child in a quiet courtyard of memory."""
+meaning = """Memory softens the present. Childhood, kindness, nostalgia, and old bonds may heal or distort the current question."""
+
+[cards.cups-seven]
+name = "Seven of Cups"
+image = "cups-seven.jpg"
+tags = ["minor", "cups", "seven"]
+visual = """A figure faces seven cloud-borne cups filled with jewels, wreath, dragon, snake, and other visions."""
+meaning = """Many images compete for desire. Fantasy, options, temptation, and projection must be sorted from real calling."""
+
+[cards.cups-eight]
+name = "Eight of Cups"
+image = "cups-eight.jpg"
+tags = ["minor", "cups", "eight"]
+visual = """A traveler leaves eight stacked cups behind and walks into a moonlit, uneven landscape."""
+meaning = """A meaningful departure is underway. Something emotionally familiar no longer nourishes enough to stay."""
+
+[cards.cups-nine]
+name = "Nine of Cups"
+image = "cups-nine.jpg"
+tags = ["minor", "cups", "nine"]
+visual = """A seated figure rests before nine arranged cups with the air of satisfaction or display."""
+meaning = """Satisfaction is possible and deserved. The card can show contentment, wish fulfillment, or the performance of having enough."""
+
+[cards.cups-ten]
+name = "Ten of Cups"
+image = "cups-ten.jpg"
+tags = ["minor", "cups", "ten"]
+visual = """A family celebrates beneath a rainbow of ten cups, with home, children, and open arms below."""
+meaning = """Emotional fulfillment extends into family, community, or chosen belonging. The theme is shared happiness and relational wholeness."""
+
+[cards.cups-page]
+name = "Page of Cups"
+image = "cups-page.jpg"
+tags = ["minor", "cups", "page"]
+visual = """A youthful figure holds a cup from which a fish appears like a surprising message from feeling."""
+meaning = """A tender message arrives from the feeling life. Openness, apology, imagination, and emotional learning are favored."""
+
+[cards.cups-knight]
+name = "Knight of Cups"
+image = "cups-knight.jpg"
+tags = ["minor", "cups", "knight"]
+visual = """An armored rider carries a cup carefully across a sparse landscape toward distant water."""
+meaning = """The heart moves with intention. Romance, invitation, artistry, and devotion appear, though idealization is possible."""
+
+[cards.cups-queen]
+name = "Queen of Cups"
+image = "cups-queen.jpg"
+tags = ["minor", "cups", "queen"]
+visual = """A contemplative ruler studies an ornate covered cup by the sea, absorbed in inner tides."""
+meaning = """Deep feeling is held with maturity. Compassion, intuition, containment, and emotional wisdom are the card’s gifts."""
+
+[cards.cups-king]
+name = "King of Cups"
+image = "cups-king.jpg"
+tags = ["minor", "cups", "king"]
+visual = """A calm ruler sits on a stone throne floating amid waves, holding cup and scepter."""
+meaning = """Emotional authority remains steady in moving waters. The card favors calm care, diplomacy, and mature compassion."""
+
+[cards.swords-ace]
+name = "Ace of Swords"
+image = "swords-ace.jpg"
+tags = ["minor", "swords", "ace"]
+visual = """A hand emerges from a cloud holding an upright sword crowned with a wreath and flanked by mountains."""
+meaning = """A clear thought cuts through confusion. Truth, decision, naming, and intellectual breakthrough are available."""
+
+[cards.swords-two]
+name = "Two of Swords"
+image = "swords-two.jpg"
+tags = ["minor", "swords", "two"]
+visual = """A blindfolded figure sits before water with two crossed swords held in tense balance."""
+meaning = """A decision is suspended. Balance may protect peace for now, but avoidance cannot hold forever."""
+
+[cards.swords-three]
+name = "Three of Swords"
+image = "swords-three.jpg"
+tags = ["minor", "swords", "three"]
+visual = """Three swords pierce a heart against rain and cloud, making pain visible and unmistakable."""
+meaning = """Pain has a name. Grief, heartbreak, hard truth, or necessary separation must be acknowledged directly."""
+
+[cards.swords-four]
+name = "Four of Swords"
+image = "swords-four.jpg"
+tags = ["minor", "swords", "four"]
+visual = """A recumbent figure lies beneath three swords, with one sword below and a stained-glass window above."""
+meaning = """Rest is part of recovery. Silence, retreat, prayer, and mental stillness restore what constant thinking cannot."""
+
+[cards.swords-five]
+name = "Five of Swords"
+image = "swords-five.jpg"
+tags = ["minor", "swords", "five"]
+visual = """A smirking figure gathers swords while others walk away under torn, unsettled clouds."""
+meaning = """Winning may cost connection. Conflict, humiliation, self-interest, and aftermath need careful ethical attention."""
+
+[cards.swords-six]
+name = "Six of Swords"
+image = "swords-six.jpg"
+tags = ["minor", "swords", "six"]
+visual = """A ferryman carries cloaked passengers and six swords across water toward a distant shore."""
+meaning = """The mind is moving away from trouble toward a calmer shore. Transition, help, and sad but necessary passage are emphasized."""
+
+[cards.swords-seven]
+name = "Seven of Swords"
+image = "swords-seven.jpg"
+tags = ["minor", "swords", "seven"]
+visual = """A figure sneaks away with five swords while two remain behind near a camp."""
+meaning = """Strategy, secrecy, or evasion is active. The card asks what is being hidden, protected, stolen, or avoided."""
+
+[cards.swords-eight]
+name = "Eight of Swords"
+image = "swords-eight.jpg"
+tags = ["minor", "swords", "eight"]
+visual = """A bound and blindfolded figure stands among eight swords in wet ground near a distant fortress."""
+meaning = """The prison is partly mental and partly real. Constraint, fear, and learned helplessness require a careful search for openings."""
+
+[cards.swords-nine]
+name = "Nine of Swords"
+image = "swords-nine.jpg"
+tags = ["minor", "swords", "nine"]
+visual = """A figure sits up in bed with face in hands while nine swords line the dark wall."""
+meaning = """Anxiety has become nocturnal and consuming. The card asks for compassion, truth-checking, and relief from mental torment."""
+
+[cards.swords-ten]
+name = "Ten of Swords"
+image = "swords-ten.jpg"
+tags = ["minor", "swords", "ten"]
+visual = """A fallen figure lies pierced by ten swords beneath a black sky and a thin dawn horizon."""
+meaning = """A cycle of harm or thought has reached its limit. The ending is painful, but the dawn shows it is not endless."""
+
+[cards.swords-page]
+name = "Page of Swords"
+image = "swords-page.jpg"
+tags = ["minor", "swords", "page"]
+visual = """A youthful figure stands alert with sword raised, watching the wind move through clouds and ground."""
+meaning = """The mind is alert and learning. Questions, vigilance, messages, and sharp observation are useful, though tact may lag behind."""
+
+[cards.swords-knight]
+name = "Knight of Swords"
+image = "swords-knight.jpg"
+tags = ["minor", "swords", "knight"]
+visual = """An armored rider charges into fierce wind with sword extended and absolute focus."""
+meaning = """Thought charges forward. The card brings urgency, argument, ambition, and the danger of speed without listening."""
+
+[cards.swords-queen]
+name = "Queen of Swords"
+image = "swords-queen.jpg"
+tags = ["minor", "swords", "queen"]
+visual = """A seated ruler raises a sword upright while extending an open hand beneath a clear sky."""
+meaning = """Clarity is compassionate when it is clean. Boundaries, direct speech, discernment, and independence guide the reading."""
+
+[cards.swords-king]
+name = "King of Swords"
+image = "swords-king.jpg"
+tags = ["minor", "swords", "king"]
+visual = """A stern ruler faces forward with an upright sword, butterflies, clouds, and disciplined command."""
+meaning = """Judgment must be principled and precise. The card favors reason, law, strategy, and responsible use of authority."""
+
+[cards.pentacles-ace]
+name = "Ace of Pentacles"
+image = "pentacles-ace.jpg"
+tags = ["minor", "pentacles", "ace"]
+visual = """A hand offers a single pentacle above a garden path leading through an arch toward mountains."""
+meaning = """A tangible opportunity is offered. Seed money, health, work, land, or practical support can become real through care."""
+
+[cards.pentacles-two]
+name = "Two of Pentacles"
+image = "pentacles-two.jpg"
+tags = ["minor", "pentacles", "two"]
+visual = """A figure juggles two pentacles within an infinity loop while ships rise and fall behind them."""
+meaning = """Material life requires balancing. Adaptability, time, money, energy, and changing conditions must be rhythmically managed."""
+
+[cards.pentacles-three]
+name = "Three of Pentacles"
+image = "pentacles-three.jpg"
+tags = ["minor", "pentacles", "three"]
+visual = """A craftsperson works in a chapel while two others consult plans and recognize skill."""
+meaning = """Skill grows through collaboration. Planning, apprenticeship, feedback, and visible craft are the route forward."""
+
+[cards.pentacles-four]
+name = "Four of Pentacles"
+image = "pentacles-four.jpg"
+tags = ["minor", "pentacles", "four"]
+visual = """A seated figure clutches coins at crown, chest, and feet, guarding possession tightly."""
+meaning = """Security may have tightened into fear. The card asks what must be protected and what is being gripped too hard."""
+
+[cards.pentacles-five]
+name = "Five of Pentacles"
+image = "pentacles-five.jpg"
+tags = ["minor", "pentacles", "five"]
+visual = """Two injured or poor figures pass beneath a lit stained-glass window in snow."""
+meaning = """Material or bodily hardship is present, along with the ache of exclusion. Help may be nearer than pride or despair allows."""
+
+[cards.pentacles-six]
+name = "Six of Pentacles"
+image = "pentacles-six.jpg"
+tags = ["minor", "pentacles", "six"]
+visual = """A well-dressed figure gives coins to one kneeling person while scales weigh the exchange."""
+meaning = """Giving and receiving are uneven but active. Generosity, debt, power, charity, and fairness shape the exchange."""
+
+[cards.pentacles-seven]
+name = "Seven of Pentacles"
+image = "pentacles-seven.jpg"
+tags = ["minor", "pentacles", "seven"]
+visual = """A worker leans on a tool and studies a growing vine of pentacles with patient concern."""
+meaning = """Growth takes time. The card favors assessment, patience, investment, and deciding whether the harvest is worth continued labor."""
+
+[cards.pentacles-eight]
+name = "Eight of Pentacles"
+image = "pentacles-eight.jpg"
+tags = ["minor", "pentacles", "eight"]
+visual = """A craftsperson carves pentacles at a bench, with completed work hung in careful sequence."""
+meaning = """Mastery comes through repetition. Practice, work, refinement, and devotion to craft are the medicine here."""
+
+[cards.pentacles-nine]
+name = "Nine of Pentacles"
+image = "pentacles-nine.jpg"
+tags = ["minor", "pentacles", "nine"]
+visual = """A richly dressed figure stands in a vineyard with a hooded bird and nine pentacles."""
+meaning = """Independence has ripened into comfort. The card speaks of self-sufficiency, earned pleasure, boundaries, and cultivated abundance."""
+
+[cards.pentacles-ten]
+name = "Ten of Pentacles"
+image = "pentacles-ten.jpg"
+tags = ["minor", "pentacles", "ten"]
+visual = """A family scene unfolds beneath an arch of ten pentacles, with elders, children, dogs, and legacy."""
+meaning = """Material life reaches lineage and legacy. Family systems, inheritance, long-term stability, and belonging are emphasized."""
+
+[cards.pentacles-page]
+name = "Page of Pentacles"
+image = "pentacles-page.jpg"
+tags = ["minor", "pentacles", "page"]
+visual = """A youthful figure holds a pentacle with absorbed attention in a fertile field."""
+meaning = """A practical learner studies a real opportunity. The card favors study, budgeting, health routines, and humble beginnings."""
+
+[cards.pentacles-knight]
+name = "Knight of Pentacles"
+image = "pentacles-knight.jpg"
+tags = ["minor", "pentacles", "knight"]
+visual = """An armored rider sits still on a dark horse, holding a pentacle over worked fields."""
+meaning = """Slow reliability is the path. Duty, patience, method, and grounded service matter more than drama."""
+
+[cards.pentacles-queen]
+name = "Queen of Pentacles"
+image = "pentacles-queen.jpg"
+tags = ["minor", "pentacles", "queen"]
+visual = """A crowned figure cradles a pentacle in a lush landscape where practical care becomes devotion."""
+meaning = """Care becomes practical and embodied. The card favors nourishment, home, resourcefulness, protection, and grounded generosity."""
+
+[cards.pentacles-king]
+name = "King of Pentacles"
+image = "pentacles-king.jpg"
+tags = ["minor", "pentacles", "king"]
+visual = """A richly robed ruler sits among vines, bulls, and coins, embodying material stewardship."""
+meaning = """Resources require stewardship. The card emphasizes competence, prosperity, responsibility, and mature material leadership."""

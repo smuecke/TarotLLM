@@ -1,0 +1,67 @@
+[spread]
+id = "celtic-cross"
+name = "Celtic Cross"
+description = "A fuller ten-card spread for present conditions, pressure, roots, conscious aims, history, near future, self, environment, hopes and fears, and outcome."
+order = 40
+
+[slots.present]
+name = "Present"
+x = 40
+y = 48
+role = "The present situation, central condition, or immediate state of the question."
+
+[slots.challenge]
+name = "Challenge"
+x = 40
+y = 48
+rot = "90deg"
+role = "The crossing challenge, pressure, obstacle, or catalytic tension."
+
+[slots.below]
+name = "Below"
+x = 40
+y = 76
+role = "The unconscious root, foundation, deep cause, or hidden basis of the matter."
+
+[slots.above]
+name = "Above"
+x = 40
+y = 20
+role = "The conscious aim, visible possibility, ideal, or what is held in mind."
+
+[slots.past]
+name = "Past"
+x = 22
+y = 48
+role = "The recent past, receding influence, or history that has shaped the current pattern."
+
+[slots.near_future]
+name = "Near Future"
+x = 58
+y = 48
+role = "The near future, approaching influence, or next development already forming."
+
+[slots.self]
+name = "Self"
+x = 78
+y = 82
+role = "The querent's self-image, stance, agency, or way of meeting the situation."
+
+[slots.environment]
+name = "Environment"
+x = 78
+y = 61
+role = "The surrounding environment, other people, external pressures, or field around the querent."
+
+[slots.hopes_fears]
+name = "Hopes/Fears"
+x = 78
+y = 40
+role = "The hopes, fears, expectations, or emotionally charged imagined outcomes."
+
+[slots.outcome]
+name = "Outcome"
+x = 78
+y = 19
+role = "The likely outcome, resolution, or direction if the pattern continues."
+

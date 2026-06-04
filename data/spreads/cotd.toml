@@ -1,0 +1,11 @@
+[spread]
+id = "cotd"
+name = "Card of the Day"
+description = "A single card whose themes and aspects dominate the current day."
+order = 5
+
+[slots.cotd]
+name = "Card of the Day"
+x = 50
+y = 49
+role = "The card of the day: It represents today's overall vibe, possible turn of events, emotions, thoughts etc."

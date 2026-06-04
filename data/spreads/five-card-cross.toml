@@ -1,0 +1,37 @@
+[spread]
+id = "five-card-cross"
+name = "Five Card Cross"
+description = "A compact cross for the heart of the matter, the obstacle crossing it, the root below, practical advice, and the likely outcome."
+order = 20
+
+[slots.center]
+name = "Center"
+x = 50
+y = 50
+role = "The center of the situation, the main matter or active force in the question."
+
+[slots.obstacle]
+name = "Obstacle"
+x = 50
+y = 50
+rot = "90deg"
+role = "The crossing influence, obstacle, tension, or complicating factor."
+
+[slots.root]
+name = "Root"
+x = 50
+y = 75
+role = "The root beneath the situation, the underlying cause, need, or foundation."
+
+[slots.advice]
+name = "Advice"
+x = 28
+y = 50
+role = "The recommended approach, helpful attitude, or practical guidance."
+
+[slots.outcome]
+name = "Outcome"
+x = 72
+y = 50
+role = "The likely outcome or direction if the current pattern continues."
+
