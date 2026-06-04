@@ -1,20 +1,25 @@
 from __future__ import annotations
 
 import asyncio
+import json
+import locale
 import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import AsyncIterator
+from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-from pydantic_ai import Agent
 from pydantic import BaseModel, Field
+from pydantic_ai import Agent
+from pydantic_ai.capabilities.web_search import WebSearch
+from pydantic_ai.models.openai import OpenAIResponsesModel
 
 from .cards import CARD_BY_KEY, DECK, DivinationCard
 
 
 ROOT = Path(__file__).resolve().parent.parent
-PROMPT_LOG_PATH = ROOT / "logs" / "prompts.log"
+LOGS_DIR = ROOT / "logs"
 SYSTEM_PROMPT = (
     "You are a mystical but grounded Oracle that reads and interprets fortune-telling "
     "cards, mainly Tarot. You receive a spread of cards with information about each "
@@ -41,6 +46,8 @@ class SpreadCard(BaseModel):
 class ReadingRequest(BaseModel):
     spread_name: str = Field(alias="spreadName")
     spread_description: str = Field(default="", alias="spreadDescription")
+    locale: str = ""
+    time_zone: str = Field(default="", alias="timeZone")
     prompt: str
     cards: list[SpreadCard]
 
@@ -66,19 +73,79 @@ def prompt_logging_enabled() -> bool:
     return os.getenv("PROMPT_LOGGING", "").strip().lower() in {"1", "true", "yes", "on"}
 
 
-def append_prompt_log(*, model_name: str, system_prompt: str, user_prompt: str) -> None:
+def web_search_enabled() -> bool:
+    return os.getenv("WEB_SEARCH_ENABLED", "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def openai_responses_model_name() -> str:
+    model_name = os.getenv("LLM_MODEL", "gpt-5-mini").strip()
+    for prefix in ("openai-responses:", "openai:"):
+        if model_name.startswith(prefix):
+            return model_name.removeprefix(prefix)
+    return model_name
+
+
+def configured_locale() -> str:
+    for key in ("APP_LOCALE", "LC_TIME", "LC_ALL", "LANG"):
+        value = os.getenv(key, "").strip()
+        if value and value.upper() not in {"C", "POSIX", "C.UTF-8"}:
+            return value
+    process_locale = locale.setlocale(locale.LC_TIME, None) or ""
+    if process_locale and process_locale.upper() not in {"C", "POSIX", "C.UTF-8"}:
+        return process_locale
+    return "Unknown"
+
+
+def current_context(*, request_locale: str = "", request_time_zone: str = "") -> str:
+    time_zone_name = request_time_zone.strip()
+    if time_zone_name:
+        try:
+            now = datetime.now(ZoneInfo(time_zone_name))
+        except ZoneInfoNotFoundError:
+            now = datetime.now().astimezone()
+            time_zone_name = now.tzinfo.tzname(now) if now.tzinfo else "Unknown"
+    else:
+        now = datetime.now().astimezone()
+        time_zone_name = now.tzinfo.tzname(now) if now.tzinfo else "Unknown"
+
+    locale_name = request_locale.strip() or configured_locale()
+    return (
+        f"Current date: {now.date().isoformat()}\n"
+        f"Current time: {now.strftime('%H:%M:%S %Z%z')}\n"
+        f"Day of the week: {now.strftime('%A')}\n"
+        f"Time zone: {time_zone_name}\n"
+        f"Locale: {locale_name}"
+    )
+
+
+def llm_log_path() -> Path | None:
     if not prompt_logging_enabled():
+        return None
+
+    file_stamp = datetime.now().astimezone().strftime("%Y%m%d-%H%M%S-%f")
+    LOGS_DIR.mkdir(parents=True, exist_ok=True)
+    return LOGS_DIR / f"llm-call-{file_stamp}.log"
+
+
+def write_llm_log(
+    *,
+    path: Path | None,
+    model_name: str,
+    system_prompt: str,
+    user_prompt: str,
+    web_search: bool,
+) -> None:
+    if path is None:
         return
 
     timestamp = datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
-    PROMPT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with PROMPT_LOG_PATH.open("a", encoding="utf-8") as log:
+    with path.open("w", encoding="utf-8") as log:
         log.write(
-            "\n"
-            + "=" * 88
+            "=" * 88
             + "\n"
             + f"Timestamp: {timestamp}\n"
             + f"Model: {model_name}\n"
+            + f"Web search enabled: {web_search}\n"
             + "-" * 88
             + "\n"
             + "SYSTEM PROMPT\n"
@@ -92,6 +159,23 @@ def append_prompt_log(*, model_name: str, system_prompt: str, user_prompt: str) 
             + "-" * 88
             + "\n"
             + user_prompt
+            + "\n"
+        )
+
+
+def append_llm_log_section(path: Path | None, heading: str, content: str) -> None:
+    if path is None:
+        return
+
+    with path.open("a", encoding="utf-8") as log:
+        log.write(
+            "-" * 88
+            + "\n"
+            + heading
+            + "\n"
+            + "-" * 88
+            + "\n"
+            + content.rstrip()
             + "\n"
         )
 
@@ -151,6 +235,8 @@ def card_context(cards: list[SpreadCard]) -> tuple[list[tuple[SpreadCard, Divina
 def build_user_prompt(request: ReadingRequest) -> str:
     _, context = card_context(request.cards)
     return (
+        f"Current context:\n"
+        f"{current_context(request_locale=request.locale, request_time_zone=request.time_zone)}\n\n"
         f"Spread: {request.spread_name}\n"
         f"Description: {request.spread_description or 'No spread description supplied.'}\n\n"
         f"Cards and context:\n"
@@ -177,18 +263,54 @@ async def generate_reading(request: ReadingRequest) -> ReadingResult:
 
 
 async def generate_with_llm(request: ReadingRequest) -> ReadingResult:
-    model_name = os.getenv("LLM_MODEL", "openai:gpt-4o-mini")
-    agent = Agent(model_name, output_type=ReadingResult, system_prompt=SYSTEM_PROMPT)
+    model_name = openai_responses_model_name()
+    search_enabled = web_search_enabled()
+    capabilities = (
+        [WebSearch(native=True, local=False, search_context_size="medium", max_uses=3)]
+        if search_enabled
+        else []
+    )
+    model = OpenAIResponsesModel(model_name)
+    agent = Agent(
+        model,
+        output_type=ReadingResult,
+        system_prompt=SYSTEM_PROMPT,
+        capabilities=capabilities,
+    )
     user_prompt = build_user_prompt(request)
-    append_prompt_log(
+    log_path = llm_log_path()
+    write_llm_log(
+        path=log_path,
         model_name=model_name,
         system_prompt=SYSTEM_PROMPT,
         user_prompt=user_prompt,
+        web_search=search_enabled,
     )
-    result = await agent.run(user_prompt)
-    if hasattr(result, "output"):
-        return result.output
-    return result.data
+    try:
+        result = await agent.run(user_prompt)
+    except Exception as exc:
+        append_llm_log_section(log_path, "ERROR", repr(exc))
+        raise
+
+    output = result.output if hasattr(result, "output") else result.data
+    append_llm_log_section(
+        log_path,
+        "LLM RESPONSE",
+        json.dumps(output.model_dump(), ensure_ascii=False, indent=2),
+    )
+    usage = result.usage
+    if callable(usage):
+        usage = usage()
+    append_llm_log_section(
+        log_path,
+        "USAGE",
+        json.dumps(usage.__dict__, ensure_ascii=False, indent=2, default=str),
+    )
+    trace = result.all_messages_json()
+    if isinstance(trace, bytes):
+        trace = trace.decode("utf-8")
+    append_llm_log_section(log_path, "MESSAGE AND TOOL TRACE", str(trace))
+    return output
 
 
 def generate_local_reading(request: ReadingRequest) -> ReadingResult:

@@ -15,7 +15,7 @@ The default deck is the Rider-Waite Tarot, but the app is designed around human-
 - `data/decks/tarot.toml` - default deck metadata, cards, tags, visual descriptions, and interpretations.
 - `data/spreads/*.toml` - spread definitions loaded into the UI dropdown.
 - `img/` - card images, plus a helper script to download them.
-- `logs/prompts.log` - optional prompt log when `PROMPT_LOGGING=true`.
+- `logs/` - optional timestamped LLM call logs when `PROMPT_LOGGING=true`.
 
 ## Setup
 
@@ -49,12 +49,18 @@ Then edit `.env` and set at least:
 ```bash
 OPENAI_BASE_URL="https://api.openai.com/v1"
 OPENAI_API_KEY="your-api-key"
-LLM_MODEL="openai:gpt-5-mini"
+LLM_MODEL="gpt-5-mini"
+WEB_SEARCH_ENABLED=false
+APP_LOCALE=
 DECK_PATH="./data/decks/tarot.toml"
 PROMPT_LOGGING=true
 ```
 
-`PROMPT_LOGGING=true` appends the full system and user prompt sent to the LLM to `logs/prompts.log`.
+`WEB_SEARCH_ENABLED=true` gives the LLM agent Pydantic AI's native web search capability when the selected model/provider supports it.
+
+`APP_LOCALE` is optional. Browser readings send their own locale and time zone automatically; this value is only used as a fallback for non-browser API calls.
+
+`PROMPT_LOGGING=true` writes one timestamped log file per LLM call in `logs/`. Each log includes the prompt, response, usage, and raw message/tool trace when available.
 
 ## Launch
 

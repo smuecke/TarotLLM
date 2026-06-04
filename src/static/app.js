@@ -199,10 +199,13 @@ async function askOracle(event) {
   readingText = "";
   setCertainty(0);
   readingOutput.innerHTML = '<p class="muted">Listening...</p>';
+  const userContext = Intl.DateTimeFormat().resolvedOptions();
 
   const body = {
     spreadName: currentSpread.name,
     spreadDescription: currentSpread.description,
+    locale: userContext.locale || navigator.language || "",
+    timeZone: userContext.timeZone || "",
     prompt: promptInput.value,
     cards: currentSpread.positions.map((position, index) => ({
       position: position.name,
