@@ -1,0 +1,36 @@
+[spread]
+id = "compass"
+name = "Kompass"
+description = "Fünf Karten, die einen Kompass bilden, nach dem man sich ausrichten kann."
+order = 25
+
+[slots.north]
+name = "Norden"
+x = 50
+y = 20
+role = "Nach Norden zeigt die Kompassnadel: Nach diesem Aspekt sollte man sich ausrichten."
+
+[slots.east]
+name = "Osten"
+x = 72
+y = 50
+role = "Im Osten geht die Sonne auf: Dieser Aspekt gewinnt an Kraft und Einfluss."
+
+[slots.south]
+name = "Süden"
+x = 50
+y = 80
+role = "Im Süden brennt die Sonne am heißesten: Dieser Aspekt ist gerade am wichtigsten."
+
+[slots.west]
+name = "Westen"
+x = 28
+y = 50
+role = "Im Westen geht die Sonne unter: Dieser Aspekt verliert an Kraft und Einfluss."
+
+[slots.center]
+name = "Mitte"
+x = 50
+y = 50
+rot = "90deg"
+role = "Dieser Aspekt kann ein Segen oder zentrales Geschenk sein."

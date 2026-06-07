@@ -1,0 +1,633 @@
+[deck]
+id = "rider-waite-tarot"
+name = "Rider-Waite Tarot"
+language = "German"
+description = "Die klassischen 78 Tarot-Karten, bestehend aus den 22 großen und 56 kleinen Arkana."
+image_base = "/img"
+back_image = "/img/back.jpg"
+
+[tags.major]
+label = "Große Arkana"
+context = """Archetypische Kräfte, Lebensstationen, Prüfungen und Wendepunkte, die größer wirken als der Alltag. Oft geht es nicht nur um eine Situation, sondern um ein Grundthema, eine Initiation, einen inneren Entwicklungsschritt oder eine Macht, die das Leben gerade deutlich färbt."""
+
+[tags.minor]
+label = "Kleine Arkana"
+context = """Bringen die großen Themen in den gelebten Alltag: Entscheidungen, Begegnungen, Arbeit, Konflikte, Gefühle, Geld, Körper, Gewohnheiten und konkrete Situationen. Zeigen, wo sich Energie, Gefühl, Denken und Materie praktisch ausdrücken."""
+
+[tags.wands]
+label = "Stäbe"
+context = """Die Stäbe gehören zum Feuer: Energie, Leidenschaft, Kreativität, Ehrgeiz, körperliche Aktivität und der Impuls, etwas anzufassen und umzusetzen. Sie sind schnell, hitzig und lebendig; sie können wärmen, begeistern und nähren, aber auch verbrennen, Streit entfachen oder überfordern."""
+
+[tags.cups]
+label = "Kelche"
+context = """Die Kelche gehören zum Wasser: Gefühle, Intuition, Liebe, Freundschaft, Sehnsucht, Trauer, Trost und emotionale Bindungen. Hier geht es darum, was in einem Menschen fließt, was ihn berührt, was verbindet oder trennt, und wie offen das Herz für andere und für sich selbst ist."""
+
+[tags.swords]
+label = "Schwerter"
+context = """Die Schwerter gehören zur Luft: Verstand, Logik, Wahrheit, Sprache, Analyse, Entscheidung und klare Sicht. Sie können Nebel durchschneiden und Dinge beim Namen nennen, aber gerade dadurch auch verletzen; oft zeigen sie Sorgen, Konflikte, harte Einsichten oder schneidende Kommunikation."""
+
+[tags.pentacles]
+label = "Münzen"
+context = """Die Münzen gehören zur Erde: Geld, Arbeit, Körper, Alltag, Besitz, Zuhause, Handwerk, Wachstum und alles, was langsam und greifbar entsteht. Sie sprechen von Ausdauer, Geduld, praktischer Verantwortung und davon, welche Werte wirklich Bestand haben."""
+
+[tags.ace]
+label = "Ass"
+context = """Die Asse bringen den reinen Anfang ihres Elements. Sie sind Samen, Geschenk, Chance und konzentrierte Kraft: noch nicht ausgeformt, aber voller Möglichkeit. Etwas Neues tritt ein und will erkannt, angenommen und auf eine gute Bahn gebracht werden."""
+
+[tags.two]
+label = "Zwei"
+context = """Die Zwei bringt Gegenüber, Wahl, Balance und Spannung zwischen zwei Polen. Es kann um Partnerschaft, Entscheidung, Abwägen oder geteilte Aufmerksamkeit gehen; oft ist die Energie schon da, muss aber erst in eine Richtung gebracht werden."""
+
+[tags.three]
+label = "Drei"
+context = """Die Drei zeigt, dass aus zwei Kräften etwas Drittes entstehen kann: Wachstum, Ausdruck, Zusammenarbeit, erste Ergebnisse. Etwas wird sichtbarer, braucht aber oft noch Abstimmung mit anderen oder einen letzten bewussten Schritt, bevor es wirklich losgeht."""
+
+[tags.four]
+label = "Vier"
+context = """Die Vier steht für Struktur, Fundament, Halt und eine erste Form von Stabilität. Sie kann Erholung, Schutz und Verschnaufen bringen, aber auch zeigen, wo Ordnung zur Enge wird oder man sich zu sehr in einer sicheren Form einrichtet."""
+
+[tags.five]
+label = "Fünf"
+context = """Die Fünf bringt Reibung, Verlust, Streit, Mangel oder eine Störung des Gleichgewichts. Sie ist selten bequem, aber sie zeigt, wo etwas nicht mehr glatt läuft und Anpassung, Ehrlichkeit oder die Frage nötig wird, wofür man eigentlich kämpft."""
+
+[tags.six]
+label = "Sechs"
+context = """Die Sechs sucht nach Ausgleich nach der Störung der Fünf. Sie kann Sieg, Hilfe, Übergang, Erinnerung, Großzügigkeit oder einen Weg zurück in ein besseres Maß anzeigen; etwas beginnt sich wieder zu ordnen oder wird in Beziehung gesetzt."""
+
+[tags.seven]
+label = "Sieben"
+context = """Die Sieben prüft: Was ist echt, was ist Illusion, was muss verteidigt, gewählt oder durchschaut werden? Sie bringt Strategie, innere Prüfung, Versuchung, Beharrlichkeit und die Frage, ob man dem eigenen Weg wirklich traut."""
+
+[tags.eight]
+label = "Acht"
+context = """Die Acht bringt Bewegung, Konsequenz und Wiederholung. Je nach Element kann das Tempo, Aufbruch, Einschränkung oder konzentrierte Arbeit bedeuten; die Dinge sind nicht mehr bloß Möglichkeit, sondern kommen in eine Phase, in der Handeln Folgen hat."""
+
+[tags.nine]
+label = "Neun"
+context = """Die Neun steht kurz vor der Vollendung und trägt deshalb eine starke, manchmal einsame Intensität. Sie kann Erfüllung, Luxus und Stolz zeigen, aber auch letzte Kraftreserven, Angst oder die Müdigkeit kurz vor dem Durchbruch."""
+
+[tags.ten]
+label = "Zehn"
+context = """Die Zehn ist Abschluss, Fülle und Übersättigung zugleich. Ein Zyklus erreicht sein Ende: als Happy End, Last, endgültiges Ausgespieltsein oder als Erbe und Struktur, die weitergegeben wird. Danach beginnt meist etwas Neues, aber nicht ohne die Konsequenz des Alten."""
+
+[tags.page]
+label = "Page"
+context = """Anfang einer Reise: kindlich, lernend, offen, neugierig und noch unerfahren im Umgang mit seinem Element. Er kann eine junge Person, eine Nachricht oder eine Energie zeigen, die erst ausprobiert, staunt und Grundlagen sammelt."""
+
+[tags.knight]
+label = "Ritter"
+context = """Der Ritter bringt das Element in Bewegung. Er ist jugendlicher, stürmischer und suchender als der Page: unterwegs, verfolgend, dienend oder erobernd. In ihm zeigt sich, wie ein Temperament handelt, bevor es ganz gereift ist."""
+
+[tags.queen]
+label = "Königin"
+context = """Die Königin verkörpert eine reife, empfangende und nährende Form ihres Elements. Sie schützt, versteht, hält zusammen und wirkt oft von innen heraus; ihre Macht liegt weniger im Befehl als in Präsenz, Fürsorge, Erfahrung und innerer Autorität."""
+
+[tags.king]
+label = "König"
+context = """Der König ist die erwachsene, verantwortliche und nach außen wirksame Form seines Elements. Er hat gelernt, die jeweilige Kraft zu führen, zu ordnen und einzusetzen; mit ihm kommen Autorität, Überblick, Verantwortung und die Frage nach reifer Macht."""
+
+[cards.fool]
+name = "Der Narr"
+image = "fool.jpg"
+tags = ["major"]
+visual = """Ein Wanderer mit bunten Kleidern, einem kleinen Bündel und einer Blume in der Hand, der verträumt in den Himmel schaut und dabei vorwärts läuft. Er steht am Rand einer Felsklippe, neben ihm ein kleiner Hund auf den Hinterbeinen. Im Hintergrund die Umrisse von Bergen und die strahlende Sonne in der rechten oberen Ecke."""
+meaning = """Naivität, Anfänger sein, Neubeginn, Leichtsinn, Unbeschwertheit, Schritt ins Ungewisse, impulsiver Aufbruch ins Abenteuer, Humor; grundsätzlich positive Karte, man hat das Glück auf seiner Seite, aber auch leichte Warnung, zu unbedacht zu sein."""
+
+[cards.magician]
+name = "Der Magier"
+image = "magician.jpg"
+tags = ["major"]
+visual = """Eine Figur mit Umhang steht vor einem Altar und hält mit der rechten Hand einen Stab in die Luft und zeigt mit der linken auf den Boden, über ihrem Kopf das Symbol der Unendlichkeit. Auf dem Altar liegen die vier Symbole der kleinen Arkana (Stab, Kelch, Schwert und Münze), die auch für die vier Elemente stehen. An den Rändern wachsen blühende Pflanzen, wie in einem Garten."""
+meaning = """Kanalisierung der Kräfte und Energien, Erfüllung von Wünschen. Es ist alles da, was man braucht, um etwas umzusetzen, erfolgreich zu werden. Alles ist bereit, man hat die nötigen Fähigkeiten, das nötige Wissen, man muss nur loslegen."""
+
+[cards.highpriestess]
+name = "Die Hohepriesterin"
+image = "highpriestess.jpg"
+tags = ["major"]
+visual = """Mystische Figur mit langem Gewand, Kreuz um den Hals, sitzend zwischen einer schwarzen Säule mit einem B und einer weißen Säule mit einem J. Halb verborgen in ihrem Gewand hält sie eine Schriftrolle, zu ihren Füßen liegt eine Mondsichel. Im Hintergrund ist ein Feld von Sonnenblumen."""
+meaning = """Verborgenes Wissen, Intuition, innere Stimme, auch mystischer, magischer, rätselhafter Aspekt. Zwischen zwei Extremen stehen, Schwarz-Weiß-Denken, dadurch Warnung und Aufforderung, Dinge nuancierter und differenzierter zu betrachten."""
+
+[cards.empress]
+name = "Die Herrscherin"
+image = "empress.jpg"
+tags = ["major"]
+visual = """Weibliche Gestalt mit langem Gewand sitzt auf einem gemütlichen Thron auf einem Getreidefeld neben einem Flusslauf, in der Hand ein Zepter, auf dem Kopf eine Krone. Am Thron lehnt ein herzförmiges Wappen mit dem Symbol der Venus darauf. Im Hintergrund sind Bäume."""
+meaning = """Personifizierte Weiblichkeit, Archetyp der Mutter (auch Schwangerschaft), erschaffen, Wachstum, behüten, nähren, etwas hegen und pflegen, aber auch bei Gefahr verteidigen. Kann zeitlich für Ostern stehen."""
+
+[cards.emperor]
+name = "Der Herrscher"
+image = "emperor.jpg"
+tags = ["major"]
+visual = """Ein ernster Herrscher mit weißem Bart, einem Zepter und einem Reichsapfel in den Händen und einer Krone auf dem Kopf sitzt auf einem steinernen Thron mit gemeißelten Widderköpfen. An den Beinen trägt er eine metallene Rüstung. Im Hintergrund ist ein Bergmassiv."""
+meaning = """Personifizierte Männlichkeit, Archetyp des Vaters, Härte, Stärke, Macht, Kontrolle, Struktur, Autorität, Selbstvertrauen, Planung auf lange Sicht."""
+
+[cards.hierophant]
+name = "Der Hierophant"
+image = "hierophant.jpg"
+tags = ["major"]
+visual = """Ein Geistlicher mit erhobenen Fingern der rechten Hand und einem Zepter in der anderen sitzt zwischen zwei Steinsäulen, davor ein Paar gekreuzter Schlüssel. Vor ihm knien zwei Menschen mit Tonsur."""
+meaning = """Regeln aufstellen oder sich daran halten, mit dem Strom schwimmen, sich an eine Gruppe anpassen. Schule, Ausbildung, Religion, konservative Werte, nicht selber denken und individuell sein, sondern Anweisungen folgen. Zwei mögliche Positionen: Der Hierophant selbst (der die Regeln aufstellt) oder wer davor kniet (der die Regeln befolgt). """
+
+[cards.lovers]
+name = "Die Liebenden"
+image = "lovers.jpg"
+tags = ["major"]
+visual = """Ein nackter Mann und eine nackte Frau in einem Garten, darüber ein Engel mit ausgebreiteten Händen. Hinter der Frau windet sich eine Schlange um einen Baum, hinter dem Mann steht ein Baum in Flammen."""
+meaning = """Liebe und Beziehung, körperliche Liebe. Auch Entscheidungen, die man mit dem Herzen trifft, und die latente Gefahr, die davon ausgeht (Stichwort "blind vor Liebe")."""
+
+[cards.chariot]
+name = "Der Wagen"
+image = "chariot.jpg"
+tags = ["major"]
+visual = """Gestalt in einer Rüstung, die in einem antiken Kampfwagen auf den Betrachter zufährt. Der Wagen wird von einer schwarzen und einer weißen Sphinx gezogen. Im Hintergrund sind Türme und Banner einer Burg oder Stadt."""
+meaning = """Schnelligkeit, Bewegung vorwärts, Ehrgeiz, Aussicht auf Sieg, Entschlossenheit. Die Antwort auf die Frage "wann?" ist "jetzt!". Aber auch Entscheidung, in welche Richtung es geht."""
+
+[cards.strength]
+name = "Kraft"
+image = "strength.jpg"
+tags = ["major"]
+visual = """Weibliche Gestalt mit einem Blumenkranz und dem Unendlichkeitssymbol über dem Kopf drückt mit den Händen das Maul eines Löwen zu. Im Hintergrund eine bewaldete, bergige Landschaft."""
+meaning = """Mentale Stärke, Geduld, Ausdauer, Bestimmtheit, "steter Tropfen höhlt den Stein", innere Kraft. Feinde bezwingen, aber nicht durch körperliche Kraft, sondern durch mentale Kraft und Ausdauer. Auch Zähmung, Annäherung."""
+
+[cards.hermit]
+name = "Der Eremit"
+image = "hermit.jpg"
+tags = ["major"]
+visual = """Eine große, gewandete, bärtige Gestalt mit einem Wanderstab hält eine leuchtende Laterne in die Luft, im Hintergrund eine karge Schneelandschaft."""
+meaning = """Rückzug, in sich kehren, introvertier. Etwas verlassen, allein sein, etwas allein machen, Zeit für sich nehmen."""
+
+[cards.wheeloffortune]
+name = "Rad des Schicksals"
+image = "wheeloffortune.jpg"
+tags = ["major"]
+visual = """Ein Rad mit mystischen Symbolen, den Buchstaben TAROT und dem Tetragrammaton, im Himmel zwischen Wolken schwebend, umgeben von geflügelten Tierwesen, die Bücher vor sich liegen haben, und weiteren mytologischen Gestalten, u. a. eine Sphinx mit einem Schwert."""
+meaning = """Alles ist offen, es gibt keine absolute Sicherheit. Möglicherweise ist es Zeit, ein Risiko einzugehen, einen Einsatz zu bringen, alles ist möglich, aber das Schicksal entscheidet über den Ausgang, der gut oder schlecht sein kann. Auch Zyklus, Jahreszeiten, Kreislauf, Übergang."""
+
+[cards.justice]
+name = "Gerechtigkeit"
+image = "justice.jpg"
+tags = ["major"]
+visual = """Eine gewandete Person mit Krone, noch oben zeigendes Schwert in der rechten und Waage in der linken Hand, sitzt zwischen zwei Steinsäulen vor einem roten Stoffvorhang."""
+meaning = """Gerechtigkeit: Man erntet was man sät. Symbolisch auch Gerichte und Ämter, Verträge, juristische Angelegenheiten."""
+
+[cards.hangedman]
+name = "Der Gehängte"
+image = "hangedman.jpg"
+tags = ["major"]
+visual = """Ein Mann, der kopfüber an einem Fuß an einem T-förmigen Balken aufgehängt ist, die Hände hinterm Rücken, das andere Bein angewinkelt. Um seinen Kopf ist ein Heiligenschein."""
+meaning = """Hängenbleiben, feststecken, nicht mehr weiterkommen. Aufforderung, eine Pause zu machen, abzuwarten, geduldig zu sein, zu beobachten, aber auch einen anderen Blickwinkel einzunehmen, die Perspektive zu wechseln."""
+
+[cards.death]
+name = "Tod"
+image = "death.jpg"
+tags = ["major"]
+visual = """Ein Skelett in Rüstung reitet auf einem Pferd durch eine Landschaft mit liegenden und knienden Gestalten, in seiner Hand eine Standarte mit einer heraldischen Rose. Ein König liegt tot auf dem Boden, davor ein Bischof mit gefalteten Händen, der zum Himmel schaut. Im Hintergrund geht die Sonne zwischen zwei steinernen Türmen auf."""
+meaning = """Ende und Neubeginn, Erneuerung, Wiedergeburt, Veränderung, notwendiger Wandel. Dinge loslassen, abschließen, zulassen, dass etwas zu Ende geht, damit etwas Neues beginnen kann, das vielleicht sogar besser ist."""
+
+[cards.temperance]
+name = "Mäßigkeit"
+image = "temperance.jpg"
+tags = ["major"]
+visual = """Ein Engel mit neutralem Gesichtsausdruck steht in einer Landschaft mit aufgehender Sonne, mit einem Fuß im Wasser und einem an Land. Er gießt Wasser von einem Kelch in einen anderen. Auf seiner Brust ist ein Dreieck abgebildet."""
+meaning = """Ausgleich, Harmonie, Ruhe, Frieden, Heilung. Keine Exzesse, kein Schwarzweiß-Denken, sondern Balance finden."""
+
+[cards.devil]
+name = "Der Teufel"
+image = "devil.jpg"
+tags = ["major"]
+visual = """Eine gehörnte und geflügelte Teufelsgestalt hockt mit Krallenfüßen auf einem Steinblock, an dem zwei gehörnte Menschen angekettet sind."""
+meaning = """Exzess, Maßlosigkeit, Verführung. Warnung, einer Sache zu verfallen, abhängig zu werden, Sucht."""
+
+[cards.tower]
+name = "Der Turm"
+image = "tower.jpg"
+tags = ["major"]
+visual = """Ein steinerner Turm auf einer Klippe vor schwarzem Himmel, in den ein Blitz einschlägt. Eine Krone stürzt von der Spitze des Turms, Flammen schlagen aus den Fenstern, zwei Menschen stürzen in die Tiefe, umgeben von Flammen."""
+meaning = """Etwas wird zerstört oder zerfällt, das man für fest und sicher gehalten hat. Plötzlicher Umbruch, radikale Veränderung, Katastrophe. Ein Hinweis, dass man aufs falsche oder unzureichende Fundament baut, dass eine Struktur instabil ist."""
+
+[cards.star]
+name = "Der Stern"
+image = "star.jpg"
+tags = ["major"]
+visual = """Eine nackte Frauengestalt kniet in einem paradiesischen Garten und gießt Wasser aus Krügen, darüber ein großer Stern mit acht Zacken, umgeben von sieben kleineren Sternen."""
+meaning = """Hoffnung, Licht im Dunkel, Erfüllung eines Wunsches, Gewinn und Glück. Steht auch für Charisma und Ausstrahlung, fordert Aufmerksamkeit."""
+
+[cards.moon]
+name = "Der Mond"
+image = "moon.jpg"
+tags = ["major"]
+visual = """Ein großer runder Mond mit einem ernsten Gesicht steht am Himmel zwischen zwei Türmen, umgeben von kleinen Flämmchen. Im Vordergrund verläuft ein gewundener Pfad ins Bild hinein bis über die Berge im Hintergrund. Ein Hund, ein Schakal und ein Hummer im Vordergrund schauen zum Mond hinauf."""
+meaning = """Ein verborgener Pfad. Steht für Orientierungslosigkeit, Unsicherheit, fordert auf, seine Intuition zu nutzen, aufs Unterbewusstsein zu hören. Symbolisiert auch Mystik, Träume, Märchenhaftes, Rätelshaftes."""
+
+[cards.sun]
+name = "Die Sonne"
+image = "sun.jpg"
+tags = ["major"]
+visual = """Eine strahlende Sonne mit gelassenem Gesicht steht am Himmel, im Vordergrund reitet ein nacktes Kind auf einem Pferd mit einer langen wehenden Fahne, dahinter Sonnenblumen."""
+meaning = """Licht, Wärme, Leben, Energie, Klarheit, positive Kraft. Steht auch für Familie."""
+
+[cards.judgement]
+name = "Gericht"
+image = "judgement.jpg"
+tags = ["major"]
+visual = """Ein Engel im Himmel bläst in eine Trompete, darunter erheben sich bleiche Gestalten aus Gräbern und schauen mit erhobenen Armen zu ihm hoch."""
+meaning = """Weckruf, Abrechnung, Beginn einer neuen Zeit, Auferstehung. Handlungen haben Konsequenzen, ähnlich wie bei "Gerechtigkeit". Kann auch bedeuten, dass etwas aus der Vergangenheit einen einholt, dass etwas Totgeglaubtes wiederkehrt."""
+
+[cards.world]
+name = "Die Welt"
+image = "world.jpg"
+tags = ["major"]
+visual = """Eine nackte weibliche Gestalt, die zwei Stäbe hält, in einem Siegeskranz, umgeben von einem menschlichen Kopf und drei Tierköpfen in Wolken."""
+meaning = """Vollständigkeit, angekommen sein, Erreichen eines Ziels, Ende einer Reise, Ende eines Zyklus. Auch Einheit mit der Welt, kosmisches Bewusstsein. Konkreter auch Reisen, Auswandern."""
+
+[cards.wands-ace]
+name = "Ass der Stäbe"
+image = "wands-ace.jpg"
+tags = ["minor", "wands", "ace"]
+visual = """Eine Hand aus einer Wolke hält einen sprießenden Stab über eine weite Landschaft; in der Ferne steht eine Burg auf einem Hügel."""
+meaning = """Neue Energie, schöpferischer Impuls, Leidenschaft, körperliche Aktivität, Tatendrang. Das Feuer der Stäbe ist hier in Reinform: Ideen wollen nicht nur geplant, sondern umgesetzt werden; ein Energieschub kommt ins Leben, manchmal so stark, dass er erst kanalisiert werden muss."""
+
+[cards.wands-two]
+name = "Zwei der Stäbe"
+image = "wands-two.jpg"
+tags = ["minor", "wands", "two"]
+visual = """Ein Mann steht auf einer Zinne, hält eine Weltkugel in der Hand und blickt in die Ferne; ein Stab ist an der Mauer befestigt, einen hält er selbst."""
+meaning = """Entscheidung zwischen zwei Projekten oder Wegen, Unruhe, Aufbruchswille, die Welt steht offen. Man hat Energie und Pläne, kann aber nicht alles zugleich verfolgen; das Feuer drängt dazu, sich bald zu entscheiden und die eigene Kraft auf eine Richtung zu bündeln."""
+
+[cards.wands-three]
+name = "Drei der Stäbe"
+image = "wands-three.jpg"
+tags = ["minor", "wands", "three"]
+visual = """Eine Gestalt steht mit drei Stäben auf einer Anhöhe und schaut über ein goldenes Meer, auf dem Schiffe fahren."""
+meaning = """Vorphase des großen Aufbruchs, ein wichtiger Schritt ist schon getan, aber der letzte Schritt hinaus steht noch bevor. Kurz innehalten, prüfen, ob alles gepackt ist, eventuell Verbündete oder eine Crew suchen; danach wird Umkehren schwieriger."""
+
+[cards.wands-four]
+name = "Vier der Stäbe"
+image = "wands-four.jpg"
+tags = ["minor", "wands", "four"]
+visual = """Vier Stäbe bilden ein geschmücktes Tor mit Girlanden, dahinter feiern Menschen vor einer Stadt oder einem Anwesen."""
+meaning = """Kleiner Erfolg, Fundament, Verschnaufpause, Feierlichkeit, willkommen sein. Ein Plateau ist erreicht, man darf sich auf die Schulter klopfen, Kraft sammeln und etwas feiern, das gelungen ist, auch wenn der ganze Weg noch nicht beendet ist."""
+
+[cards.wands-five]
+name = "Fünf der Stäbe"
+image = "wands-five.jpg"
+tags = ["minor", "wands", "five"]
+visual = """Fünf junge Menschen heben Stäbe durcheinander, als würden sie üben, raufen oder in hitzigen Streit geraten."""
+meaning = """Wettkampf, Konkurrenz, Ärger in der Gemeinschaft, Funkenflug. Es wird nicht mit tödlichen Waffen gekämpft, aber es kann Beulen geben; wichtig ist zu fragen, ob der Streit sich lohnt oder ob man sich in kleinen Reibereien verheddert und das größere Ziel aus den Augen verliert."""
+
+[cards.wands-six]
+name = "Sechs der Stäbe"
+image = "wands-six.jpg"
+tags = ["minor", "wands", "six"]
+visual = """Ein Reiter mit Lorbeerkranz zieht auf einem Pferd durch eine Menge und trägt einen geschmückten Stab wie ein Siegeszeichen."""
+meaning = """Sieg, Anerkennung, Lob, Triumph, Applaus, Öffentlichkeit. Man wird gesehen und gefeiert, vielleicht sogar zum Vorbild gemacht; die Karte fragt auch, ob man selbst hoch zu Ross sitzt oder bewundernd in der Menge steht."""
+
+[cards.wands-seven]
+name = "Sieben der Stäbe"
+image = "wands-seven.jpg"
+tags = ["minor", "wands", "seven"]
+visual = """Eine Figur steht auf erhöhtem Boden und hält einen Stab abwehrend gegen sechs Stäbe, die von unten auf sie gerichtet sind."""
+meaning = """Sich verteidigen, Kritik, Trotz, Ärger, Rebellion, Schutz. Man steht gegen Widerstand, vielleicht weil man aus der Herde ausbricht oder etwas Eigenes beschützen muss; jetzt ist der Punkt, zu sagen: ab hier nicht weiter."""
+
+[cards.wands-eight]
+name = "Acht der Stäbe"
+image = "wands-eight.jpg"
+tags = ["minor", "wands", "eight"]
+visual = """Acht Stäbe fliegen wie Pfeile durch die Luft über eine grüne Landschaft mit Fluss."""
+meaning = """Schnelligkeit, Bewegung, Dinge kommen rasch in Gang. Nachrichten, Briefe, Telefonate, E-Mails, soziale Medien, Klatsch oder Neuigkeiten können eine Rolle spielen; die Karte bringt Tempo und Kommunikation."""
+
+[cards.wands-nine]
+name = "Neun der Stäbe"
+image = "wands-nine.jpg"
+tags = ["minor", "wands", "nine"]
+visual = """Eine bandagierte Gestalt hält sich an einem Stab fest, während acht weitere Stäbe wie ein Zaun hinter ihr stehen."""
+meaning = """Erschöpfung, Verwundung, kurz vor dem Aufgeben, aber noch nicht am Ende. Eine letzte Kraftreserve ist da; noch einmal durchhalten, sich vorbereiten und verteidigen, denn der Durchbruch kann kurz bevorstehen."""
+
+[cards.wands-ten]
+name = "Zehn der Stäbe"
+image = "wands-ten.jpg"
+tags = ["minor", "wands", "ten"]
+visual = """Eine gebeugte Gestalt trägt zehn schwere Stäbe vor sich her und geht auf eine Stadt zu, sieht aber kaum noch den Weg."""
+meaning = """Last, Überforderung, Stress, seelische und körperliche Belastung. Man hat zu viel allein an sich gerafft, sieht vor lauter Last kaum noch Ziel oder Sinn; es kann Zeit sein, abzulegen, Abstand zu nehmen oder Aufgaben zu delegieren."""
+
+[cards.wands-page]
+name = "Page der Stäbe"
+image = "wands-page.jpg"
+tags = ["minor", "wands", "page"]
+visual = """Eine junge Figur steht in einer trockenen Landschaft und betrachtet aufmerksam einen sprießenden Stab in ihren Händen."""
+meaning = """Kindliche Feuerenergie, Anfänger, Begeisterung, Impulsivität, Zappeligkeit, Kreativität. Ideen sollen sofort ausprobiert werden, oft ohne viel Planung oder Ausdauer; mutig wie der Narr beginnt man ein Abenteuer und vertraut darauf, irgendwie durchzukommen."""
+
+[cards.wands-knight]
+name = "Ritter der Stäbe"
+image = "wands-knight.jpg"
+tags = ["minor", "wands", "knight"]
+visual = """Ein gerüsteter Reiter prescht durch eine heiße Landschaft, den Stab erhoben, das Pferd voller Bewegung."""
+meaning = """Abenteurer, Eroberer, Übermut, Reiselust, Risiko, Leben auf der Überholspur. Das Feuer ist jugendlich geworden: leidenschaftlich, schnell, selbstbewusst, manchmal selbstüberschätzend, aber voller Lust, die Welt zu erleben."""
+
+[cards.wands-queen]
+name = "Königin der Stäbe"
+image = "wands-queen.jpg"
+tags = ["minor", "wands", "queen"]
+visual = """Eine gekrönte Frau sitzt mit Stab und Sonnenblume auf einem Thron, Löwen und eine schwarze Katze begleiten sie."""
+meaning = """Leidenschaftliche, selbstbewusste, charismatische Feuerenergie. Sie lässt sich nichts gefallen, hat etwas zu sagen, wirkt sexy, kreativ, kämpferisch und ansteckend; wie ein Vulkan kann sie charmant wärmen oder heftig ausbrechen."""
+
+[cards.wands-king]
+name = "König der Stäbe"
+image = "wands-king.jpg"
+tags = ["minor", "wands", "king"]
+visual = """Ein gekrönter Herrscher sitzt mit blühendem Stab auf einem Thron, umgeben von Salamander- und Feuersymbolen."""
+meaning = """Gemeisterte Feuerenergie, kontrollierte Leidenschaft, Führungsqualität, Kreativität und Experimentierfreude. Er kann andere begeistern, nicht nur Befehle geben, sondern vom Meer erzählen, bis andere selbst Schiffe bauen wollen."""
+
+[cards.cups-ace]
+name = "Ass der Kelche"
+image = "cups-ace.jpg"
+tags = ["minor", "cups", "ace"]
+visual = """Eine Hand aus einer Wolke hält einen überfließenden Kelch, darüber eine Taube, darunter Wasser und Seerosen."""
+meaning = """Neue Gefühle, neue Bekanntschaften, Liebe, Freundschaft, Intuition, emotionaler Anfang. Das Element Wasser bringt Bewegung ins Innere: etwas berührt, öffnet oder überwältigt, Menschen kommen ins Leben und Gefühle beginnen zu fließen."""
+
+[cards.cups-two]
+name = "Zwei der Kelche"
+image = "cups-two.jpg"
+tags = ["minor", "cups", "two"]
+visual = """Zwei Menschen stehen einander gegenüber und reichen sich Kelche, darüber ein geflügelter Löwenkopf und ein Stab mit Schlangen."""
+meaning = """Treffen, Beziehung eingehen, aufeinander zugehen, etwas gemeinsam machen. Das kann Liebe, Freundschaft, Versöhnung oder auch geschäftliche Verbindung sein; zwei Energien finden zueinander und es entstehen Bindungen."""
+
+[cards.cups-three]
+name = "Drei der Kelche"
+image = "cups-three.jpg"
+tags = ["minor", "cups", "three"]
+visual = """Drei Figuren tanzen miteinander und heben ihre Kelche, umgeben von Früchten und Erntezeichen."""
+meaning = """Feier, Freude, Gemeinschaft, Party, guter Ausgang. Mehrere Menschen kommen zusammen und es gibt Grund zur Freude; aus zwei zusammenfließenden Energien kann auch etwas Drittes, Neues entstehen."""
+
+[cards.cups-four]
+name = "Vier der Kelche"
+image = "cups-four.jpg"
+tags = ["minor", "cups", "four"]
+visual = """Eine sitzende Figur lehnt unter einem Baum mit verschränkten Armen, vor ihr drei Kelche, während aus einer Wolke ein weiterer Kelch angeboten wird."""
+meaning = """Langeweile, Lustlosigkeit, Trübsinn, Übersättigung, etwas wird übersehen oder bewusst abgelehnt. Eine Möglichkeit, Chance oder ein Ausweg ist da, erreicht einen aber nicht, weil man zu sehr auf das Vorhandene, die eigene Stimmung oder den inneren Rückzug fixiert ist."""
+
+[cards.cups-five]
+name = "Fünf der Kelche"
+image = "cups-five.jpg"
+tags = ["minor", "cups", "five"]
+visual = """Eine dunkle Gestalt trauert vor drei umgestoßenen Kelchen, während zwei Kelche hinter ihr noch aufrecht stehen; in der Nähe führt eine Brücke weiter."""
+meaning = """Trauer, Verlust, Bereuen, über vergossene Milch weinen. Man konzentriert sich so stark auf das Verlorene, dass das noch Vorhandene nicht mehr gesehen wird; die Karte erinnert daran, nicht alles Positive und nicht alle Gefahren der Umgebung auszublenden."""
+
+[cards.cups-six]
+name = "Sechs der Kelche"
+image = "cups-six.jpg"
+tags = ["minor", "cups", "six"]
+visual = """Ein Kind überreicht einem anderen einen mit Blumen gefüllten Kelch in einem ruhigen Hof oder Garten."""
+meaning = """Kindheit, Nostalgie, Erinnerung, Geschenke, vergangene Hobbys oder Menschen aus früheren Zeiten im Gespräch. Es geht um bittersüße Rückschau, Kindlichkeit und darum, schöne Momente wieder aufleben zu lassen oder Wissen an Jüngere weiterzugeben."""
+
+[cards.cups-seven]
+name = "Sieben der Kelche"
+image = "cups-seven.jpg"
+tags = ["minor", "cups", "seven"]
+visual = """Eine dunkle Figur steht vor sieben Kelchen in Wolken, gefüllt mit Reichtum, Gestalten, Schlange, Drache, Kranz und anderen Verlockungen."""
+meaning = """Wahlmöglichkeiten, Fantasien, Gedankenschlösser, zu viele Optionen im Kopf. Man kann nicht alles zugleich haben; irgendwann muss gewählt werden, was wirklich in die Tat umgesetzt werden soll, statt nur in Möglichkeiten zu leben."""
+
+[cards.cups-eight]
+name = "Acht der Kelche"
+image = "cups-eight.jpg"
+tags = ["minor", "cups", "eight"]
+visual = """Eine Gestalt lässt acht aufgestellte Kelche zurück und geht nachts unter dem Mond in eine bergige Landschaft hinaus."""
+meaning = """Aufbruch zu neuen Ufern, etwas zurücklassen, weiterziehen, weil ein Ort, Mensch oder Zustand nichts mehr gibt. Es ist kein dramatisches Türenknallen, sondern eine ruhige, innere Entscheidung: mit leichterem Gepäck gehen, weil es mehr geben muss."""
+
+[cards.cups-nine]
+name = "Neun der Kelche"
+image = "cups-nine.jpg"
+tags = ["minor", "cups", "nine"]
+visual = """Eine zufriedene sitzende Figur präsentiert vor sich neun aufgereihte Kelche wie eine Sammlung."""
+meaning = """Stolz, Erfüllung, Selbstvertrauen, Glück, Wunscherfüllung. Man hat etwas erreicht oder gesammelt, worauf man von innen heraus stolz ist; Anerkennung ist schön, aber die Zufriedenheit hängt nicht davon ab."""
+
+[cards.cups-ten]
+name = "Zehn der Kelche"
+image = "cups-ten.jpg"
+tags = ["minor", "cups", "ten"]
+visual = """Eine Familie steht mit erhobenen Armen unter einem Regenbogen aus zehn Kelchen, Kinder tanzen, im Hintergrund liegt ein Zuhause."""
+meaning = """Happy End, glückliche Familie, gute Zukunft, Wohlstand, Freude, alles wird gut. Eine sehr positive Karte: aus der Gefahrenzone heraus, Grund zum Feiern, emotionale Erfüllung und das Gefühl, angekommen zu sein."""
+
+[cards.cups-page]
+name = "Page der Kelche"
+image = "cups-page.jpg"
+tags = ["minor", "cups", "page"]
+visual = """Eine junge Figur hält einen Kelch, aus dem überraschend ein Fisch hervorschaut."""
+meaning = """Fantasievolles, sensibles inneres Kind; kreativ, emotional, freundlich, fürsorglich. Diese Energie lebt nah an den Gefühlen, kann leicht verletzt werden, will gefallen und drückt sich gern künstlerisch oder liebevoll helfend aus."""
+
+[cards.cups-knight]
+name = "Ritter der Kelche"
+image = "cups-knight.jpg"
+tags = ["minor", "cups", "knight"]
+visual = """Ein gerüsteter Reiter trägt vorsichtig einen Kelch durch eine stille Landschaft, als bringe er eine Botschaft oder Einladung."""
+meaning = """Romantiker, Prinz-Charming-Energie, Verliebtheit, Ritterlichkeit, Träumen auf Wolke sieben. Die Karte steht für Gefühl, Date, Einladung, Liebesbrief und die Gefahr, sich in Idealbildern zu verlieren und den Boden unter den Füßen zu verlieren."""
+
+[cards.cups-queen]
+name = "Königin der Kelche"
+image = "cups-queen.jpg"
+tags = ["minor", "cups", "queen"]
+visual = """Eine Königin sitzt am Wasser und betrachtet einen reich verzierten, geschlossenen Kelch in ihren Händen."""
+meaning = """Tröstende, mütterliche, mitfühlende Gefühlsmeisterin. Zu ihr pilgert man, wenn man sich ausweinen muss; sie hört mit offenen Armen zu, versteht Emotionen und hilft, wieder mit den eigenen Gefühlen zurechtzukommen."""
+
+[cards.cups-king]
+name = "König der Kelche"
+image = "cups-king.jpg"
+tags = ["minor", "cups", "king"]
+visual = """Ein ruhiger König sitzt mit Kelch und Zepter auf einem steinernen Thron, umgeben von bewegtem Wasser."""
+meaning = """Ruhiger, weiser, familienorientierter Umgang mit Gefühlen. Er lässt ausreden, hört zu, ruht in sich und ist eine Instanz, der man Probleme anvertrauen kann, weil am Ende meist ein guter, besonnener Rat kommt."""
+
+[cards.swords-ace]
+name = "Ass der Schwerter"
+image = "swords-ace.jpg"
+tags = ["minor", "swords", "ace"]
+visual = """Eine Hand aus einer Wolke hält ein aufrechtes Schwert, dessen Spitze Krone und Kranz trägt; im Hintergrund stehen schroffe Berge."""
+meaning = """Neuer Plan, neuer Durchblick, klare Wahrnehmung, Verstand, Logik, Kommunikation. Das Schwert durchschneidet Nebel und Unklarheit, kann aber auch verletzen; hier beginnt eine Phase des Denkens, Benennens und verstandesmäßigen Ordnens."""
+
+[cards.swords-two]
+name = "Zwei der Schwerter"
+image = "swords-two.jpg"
+tags = ["minor", "swords", "two"]
+visual = """Eine Frau mit verbundenen Augen sitzt vor Wasser und hält zwei gekreuzte Schwerter in angespannter Balance."""
+meaning = """Zwischen zwei Entscheidungen oder Parteien stehen, sich nicht einmischen wollen, blindstellen vor der Wahrheit. Die Karte fordert auf, Fakten anzusehen, nicht nur wegzuschauen und eine verstandesmäßige Entscheidung zu treffen, auch wenn man lieber neutral bliebe."""
+
+[cards.swords-three]
+name = "Drei der Schwerter"
+image = "swords-three.jpg"
+tags = ["minor", "swords", "three"]
+visual = """Drei Schwerter durchbohren ein Herz vor grauen Wolken und fallendem Regen."""
+meaning = """Gebrochenes Herz, Liebeskummer, schlechte Nachrichten, Schmerz, Betrug, Trennung. Eine der unmittelbar lesbaren Karten: etwas tut weh und kann nicht schön geredet werden; der Himmel selbst scheint mitzuweinen."""
+
+[cards.swords-four]
+name = "Vier der Schwerter"
+image = "swords-four.jpg"
+tags = ["minor", "swords", "four"]
+visual = """Eine liegende Figur ruht wie auf einem Grabmal, drei Schwerter hängen darüber, ein weiteres liegt darunter; ein buntes Fenster leuchtet im Hintergrund."""
+meaning = """Ruhe, Rückzug, Verarbeitung, Heilung, Zeit für sich. Nach Schmerz oder Überforderung braucht man Stille, vielleicht fast Isolation, um zu trauern, Wunden schließen zu lassen und als veränderte Person wieder aufzustehen."""
+
+[cards.swords-five]
+name = "Fünf der Schwerter"
+image = "swords-five.jpg"
+tags = ["minor", "swords", "five"]
+visual = """Eine selbstzufriedene Figur sammelt Schwerter ein, während andere geschlagen oder traurig weggehen; der Himmel ist zerrissen und unruhig."""
+meaning = """Egoismus, Kampf, Gewinner und Verlierer, über andere hinweggehen, Beute machen. Man kann derjenige sein, der sich rücksichtslos durchsetzt, oder derjenige, dem etwas genommen wird; die Karte warnt vor Kämpfen, die moralisch und menschlich teuer werden."""
+
+[cards.swords-six]
+name = "Sechs der Schwerter"
+image = "swords-six.jpg"
+tags = ["minor", "swords", "six"]
+visual = """Ein Fährmann bringt eine verhüllte Gestalt und ein Kind mit sechs Schwertern im Boot über das Wasser zu einem anderen Ufer."""
+meaning = """Flucht aus schlechten Zeiten, Übergang, Reise, Umzug, raus aus der akuten Gefahr. Eine positive Karte nach Belastung: man lässt Ärger, Stress oder Katastrophe hinter sich, wird getragen oder beschützt und kann wieder durchatmen."""
+
+[cards.swords-seven]
+name = "Sieben der Schwerter"
+image = "swords-seven.jpg"
+tags = ["minor", "swords", "seven"]
+visual = """Eine Figur schleicht mit fünf Schwertern davon, während zwei Schwerter zurückbleiben und im Hintergrund ein Lager zu sehen ist."""
+meaning = """Trick, Heimlichkeit, Ausweichen, List, etwas an sich nehmen oder nicht offen spielen. Aus dem Schwert-Thema von Verstand und Taktik wird hier eine zweischneidige Strategie: Man sollte fragen, was verborgen, gestohlen, geschützt oder umgangen wird."""
+
+[cards.swords-eight]
+name = "Acht der Schwerter"
+image = "swords-eight.jpg"
+tags = ["minor", "swords", "eight"]
+visual = """Eine gefesselte und geblendete Figur steht zwischen acht Schwertern auf nassem Boden, im Hintergrund eine Burg."""
+meaning = """Festgesetzt sein, Angst, keinen Ausweg sehen, erlernte Hilflosigkeit. Die Lage wirkt auswegloser, als sie ist; die Beine sind frei, aber die Person traut sich nicht zu gehen, weil sie den Weg nicht sieht oder sich selbst nichts mehr zutraut."""
+
+[cards.swords-nine]
+name = "Neun der Schwerter"
+image = "swords-nine.jpg"
+tags = ["minor", "swords", "nine"]
+visual = """Eine Gestalt sitzt nachts im Bett und verbirgt das Gesicht in den Händen, während neun Schwerter über ihr an der dunklen Wand hängen."""
+meaning = """Angst, Schlaflosigkeit, Albträume, Sorgen, Panik, Gedanken, die nachts größer werden. Die Monster unter dem Bett sind hier erwachsene Probleme; man kommt nicht zur Ruhe, weil die Dämonen des Kopfes zu laut geworden sind."""
+
+[cards.swords-ten]
+name = "Zehn der Schwerter"
+image = "swords-ten.jpg"
+tags = ["minor", "swords", "ten"]
+visual = """Eine gestürzte Gestalt liegt am Boden, von zehn Schwertern durchbohrt; über ihr schwarzer Himmel, am Horizont ein schmaler heller Streifen."""
+meaning = """Game Over, betrogen, ausgestellt, zurückgelassen, verloren. Für viele die dunkelste Karte: hier ist nichts mehr zu gewinnen, dieses Spiel ist ausgespielt; nur sehr fern liegt der Gedanke, dass nach einem Ende irgendwann ein anderes Spiel beginnen kann."""
+
+[cards.swords-page]
+name = "Page der Schwerter"
+image = "swords-page.jpg"
+tags = ["minor", "swords", "page"]
+visual = """Eine junge Figur steht wachsam mit erhobenem Schwert in windiger Landschaft und blickt aufmerksam zur Seite."""
+meaning = """Neugier, scharfer Verstand, Beobachtung, Experimentierfreude, aber wenig Höflichkeitsfilter. Wie ein kindlicher Sherlock oder Sheldon sagt diese Energie, was sie sieht, ohne lange zu überlegen, ob die Wahrheit andere verletzt."""
+
+[cards.swords-knight]
+name = "Ritter der Schwerter"
+image = "swords-knight.jpg"
+tags = ["minor", "swords", "knight"]
+visual = """Ein gerüsteter Reiter stürmt mit vorgestrecktem Schwert in starken Wind und Wolken hinein."""
+meaning = """Stürmische Intelligenz, Taktik, Risiko, Ego, Eroberer- und Bad-Boy-Energie. Der Verstand ist schnell und schneidend, kann brillant strategisch sein, aber auch rücksichtslos, selbstüberschätzend und verletzend."""
+
+[cards.swords-queen]
+name = "Königin der Schwerter"
+image = "swords-queen.jpg"
+tags = ["minor", "swords", "queen"]
+visual = """Eine Königin sitzt auf einem Thron, hält ein Schwert aufrecht und streckt die andere Hand aus; der Himmel ist klar und luftig."""
+meaning = """Analytische, überlegene, weitsichtige Ratgeberin. Sie erkennt Probleme klar, benennt wunde Punkte nicht aus Bosheit, sondern weil sie helfen will; wenn Emotionen nicht reichen und Taktik nötig ist, ist sie die richtige Instanz."""
+
+[cards.swords-king]
+name = "König der Schwerter"
+image = "swords-king.jpg"
+tags = ["minor", "swords", "king"]
+visual = """Ein ernster König sitzt frontal mit aufrechtem Schwert auf einem Thron, umgeben von Zeichen der Luft und des klaren Denkens."""
+meaning = """Brillanter Stratege, Schachspieler, Verstand als König. Er sieht viele Züge voraus, gibt nicht unbedingt den emotional angenehmsten Rat, aber oft den sachlich klügsten; Wahrheit wird nicht schön verpackt, sondern präzise ausgesprochen."""
+
+[cards.pentacles-ace]
+name = "Ass der Münzen"
+image = "pentacles-ace.jpg"
+tags = ["minor", "pentacles", "ace"]
+visual = """Eine Hand aus einer Wolke bietet eine große Münze über einem Gartenweg an, der durch ein Tor zu Bergen führt."""
+meaning = """Neues Geld, neue Jobmöglichkeiten, materielle Chance, Wachstum, praktisches Glück. Die Erde bringt etwas Greifbares ins Leben: eine Möglichkeit, etwas aufzubauen, zu verdienen oder in der Welt wirklich werden zu lassen."""
+
+[cards.pentacles-two]
+name = "Zwei der Münzen"
+image = "pentacles-two.jpg"
+tags = ["minor", "pentacles", "two"]
+visual = """Eine Figur jongliert zwei Münzen in einer Unendlichkeitsschleife, während im Hintergrund Schiffe auf hohen Wellen schwanken."""
+meaning = """Jonglieren, Work-Life-Balance, Auf und Ab, Überlastung durch zwei Dinge zugleich. Man versucht etwas Schwieriges in der Luft zu halten; das geht nicht ewig, eine Kleinigkeit kann die Balance kippen, also braucht es Auswahl und Priorität."""
+
+[cards.pentacles-three]
+name = "Drei der Münzen"
+image = "pentacles-three.jpg"
+tags = ["minor", "pentacles", "three"]
+visual = """Ein Handwerker arbeitet in einem Kirchen- oder Kapellenraum, während zwei andere Personen Pläne betrachten und mit ihm beraten."""
+meaning = """Teamwork, Planung, Entwürfe, Beratung, sichtbare Arbeit an etwas Größerem. Man baut nicht allein, sondern mit anderen; jeder bringt Wissen ein, wichtige Auftraggeber können aufmerksam werden, und aus Zusammenarbeit entsteht etwas Dauerhaftes."""
+
+[cards.pentacles-four]
+name = "Vier der Münzen"
+image = "pentacles-four.jpg"
+tags = ["minor", "pentacles", "four"]
+visual = """Eine sitzende Figur hält Münzen an Kopf, Brust und Füßen fest und wirkt, als wolle sie nichts davon hergeben."""
+meaning = """Geiz, Klammern, Besitzdenken, Sicherheit um jeden Preis. Alles wird festgehalten: Geld, Dinge, Menschen; manchmal ist Sparsamkeit nötig, aber oft warnt die Karte davor, das Gute nur für irgendwann aufzuheben und nie wirklich zu leben oder zu teilen."""
+
+[cards.pentacles-five]
+name = "Fünf der Münzen"
+image = "pentacles-five.jpg"
+tags = ["minor", "pentacles", "five"]
+visual = """Zwei arme oder verletzte Gestalten gehen im Schnee an einem erleuchteten Kirchenfenster mit fünf Münzen vorbei."""
+meaning = """Harte Zeiten, finanzieller Engpass, Mangel, Kälte, Sorgen und Belastung. Man fühlt sich draußen vor der Wärme, muss vielleicht an Erspartes gehen; zugleich stellt sich die Frage, ob Hilfe näher ist, als man in Not wahrnimmt."""
+
+[cards.pentacles-six]
+name = "Sechs der Münzen"
+image = "pentacles-six.jpg"
+tags = ["minor", "pentacles", "six"]
+visual = """Eine wohlgekleidete Person gibt knienden Bedürftigen Münzen und hält dabei eine Waage in der Hand."""
+meaning = """Almosen, Wohltätigkeit, geben und nehmen, Überschuss teilen. Die Karte fragt, ob man der Gebende oder der Empfangende ist, und erinnert daran, nicht nur Geld, sondern auch Wissen, Mittel, Zeit oder konkrete passende Hilfe weiterzugeben."""
+
+[cards.pentacles-seven]
+name = "Sieben der Münzen"
+image = "pentacles-seven.jpg"
+tags = ["minor", "pentacles", "seven"]
+visual = """Ein Gärtner lehnt auf seinem Werkzeug und betrachtet nachdenklich eine Pflanze, an der sieben Münzen wachsen."""
+meaning = """Geduld, Pflege, Wachstum braucht Zeit, noch nicht aufgeben. Wie beim Gärtnern muss gesät, gewartet, geschnitten, gewässert und vertraut werden; vielleicht dauert es noch, vielleicht steht die Ernte bald bevor, aber gute Bedingungen sind entscheidend."""
+
+[cards.pentacles-eight]
+name = "Acht der Münzen"
+image = "pentacles-eight.jpg"
+tags = ["minor", "pentacles", "eight"]
+visual = """Ein Handwerker sitzt an einer Werkbank und arbeitet sorgfältig an Münzen; fertige Stücke hängen geordnet neben ihm."""
+meaning = """Arbeit, Routine, Wiederholung, Disziplin, Talent zur Meisterschaft ausformen. Es geht um harte, verdiente Fortschritte: immer wieder üben, immer wieder an denselben Dingen arbeiten, bis Können und Lohn daraus entstehen."""
+
+[cards.pentacles-nine]
+name = "Neun der Münzen"
+image = "pentacles-nine.jpg"
+tags = ["minor", "pentacles", "nine"]
+visual = """Eine reich gekleidete Gestalt steht in einem üppigen Garten oder Weinberg mit neun Münzen und einem gezähmten Vogel auf der Hand."""
+meaning = """Luxus, Genuss, Reichtum, schöne Dinge wertschätzen, Freizeit, Natur, grüne Oase. Man darf das genießen, was man sich geschaffen hat, Geld oder Zeit für Dinge ausgeben, die wirklich glücklich machen, und den eigenen Garten betrachten."""
+
+[cards.pentacles-ten]
+name = "Zehn der Münzen"
+image = "pentacles-ten.jpg"
+tags = ["minor", "pentacles", "ten"]
+visual = """Eine große Familienszene mit älterer Gestalt, Paar, Kind und Hunden spielt sich unter einem Bogen aus zehn Münzen ab."""
+meaning = """Familie, Dynastie, Tradition, Werte, langfristige Sicherheit, Familiengeschäft, Erbe. Es geht um Geld und Strukturen, die nicht nur einer Person dienen, sondern Generationen, Angehörige oder viele Menschen mittragen können."""
+
+[cards.pentacles-page]
+name = "Page der Münzen"
+image = "pentacles-page.jpg"
+tags = ["minor", "pentacles", "page"]
+visual = """Eine junge Figur steht auf fruchtbarem Feld und hält eine Münze mit konzentrierter Aufmerksamkeit vor sich."""
+meaning = """Anfang des materiellen Lernens, Fundament legen, Ausbildung, Sparen, Businessplan, praktische Vorbereitung. Diese Energie weiß, dass Werte Zeit brauchen, prüft den Boden und beginnt vorsichtig, etwas Solides aufzubauen."""
+
+[cards.pentacles-knight]
+name = "Ritter der Münzen"
+image = "pentacles-knight.jpg"
+tags = ["minor", "pentacles", "knight"]
+visual = """Ein gerüsteter Ritter sitzt ruhig auf einem dunklen Pferd und hält eine Münze über bearbeiteten Feldern."""
+meaning = """Verlässlichkeit, Geduld, solide Arbeit, kein Risiko, ruhiges Leben. Er erwartet keinen Lottogewinn, sondern versteht, dass Dinge wachsen müssen und man für Sicherheit, Job, Familie und Ernte beständig arbeiten muss."""
+
+[cards.pentacles-queen]
+name = "Königin der Münzen"
+image = "pentacles-queen.jpg"
+tags = ["minor", "pentacles", "queen"]
+visual = """Eine gekrönte Frau sitzt in einer üppigen Landschaft und hält eine Münze liebevoll und aufmerksam in den Händen."""
+meaning = """Alltagsorientierte, wirtschaftliche, nährende Energie. Sie führt innerlich ein Haushaltsbuch, plant Ausgaben, kauft Qualität, bewirtet gut, sagt verlässlich zu oder nein und sorgt dafür, dass Familie, Gäste und Ressourcen gut versorgt sind."""
+
+[cards.pentacles-king]
+name = "König der Münzen"
+image = "pentacles-king.jpg"
+tags = ["minor", "pentacles", "king"]
+visual = """Ein reich gekleideter König sitzt zwischen Weinranken, Münzen und Stiersymbolen auf seinem Thron."""
+meaning = """Meister der materiellen Welt, Geld, Anlagen, Immobilien, Besitz, Firmen, Wert und Handwerk. Er weiß, wie man Geld erwirtschaftet und erhält, erkennt den wahren Wert der Dinge und bleibt alltagstauglich, erdgebunden und kompetent."""

@@ -1,0 +1,36 @@
+[spread]
+id = "five-card-cross"
+name = "Fünf-Karten-Kreuz"
+description = "Ein kompaktes Kreuz für den Kern der Angelegenheit, das kreuzende Hindernis, die Wurzel darunter, einen hilfreichen Rat und den wahrscheinlichen Ausgang."
+order = 20
+
+[slots.center]
+name = "Zentrum"
+x = 50
+y = 50
+role = "Das Zentrum der Situation, die Hauptsache oder aktive Kraft in der Frage."
+
+[slots.obstacle]
+name = "Hindernis"
+x = 50
+y = 50
+rot = "90deg"
+role = "Der kreuzende Einfluss, das Hindernis, die Spannung oder der erschwerende Faktor."
+
+[slots.root]
+name = "Wurzel"
+x = 50
+y = 75
+role = "Die Wurzel unter der Situation, die zugrunde liegende Ursache, Notwendigkeit oder Grundlage."
+
+[slots.advice]
+name = "Rat"
+x = 28
+y = 50
+role = "Die empfohlene Haltung, hilfreiche Herangehensweise oder praktische Orientierung."
+
+[slots.outcome]
+name = "Ausgang"
+x = 72
+y = 50
+role = "Der wahrscheinliche Ausgang oder die Richtung, wenn das aktuelle Muster anhält."

@@ -8,19 +8,19 @@
   </head>
   <body>
     <main class="app-shell">
-      <section class="table" aria-label="Tarot spread workspace">
+      <section class="table" data-i18n-aria="tableAria" aria-label="Tarot spread workspace">
         <header class="topbar">
           <div>
-            <h1>Tarot Oracle</h1>
-            <p id="spreadHint">Choose a spread, set the cards, and ask.</p>
+            <h1 data-i18n="appTitle">Tarot Oracle</h1>
+            <p id="spreadHint" data-i18n="spreadHint">Choose a spread, set the cards, and ask.</p>
           </div>
           <div class="controls">
             <label>
-              <span>Spread</span>
+              <span data-i18n="spreadLabel">Spread</span>
               <select id="spreadSelect"></select>
             </label>
-            <button id="randomButton" type="button">Random</button>
-            <button id="clearButton" type="button">Clear</button>
+            <button id="randomButton" type="button" data-i18n="randomButton">Random</button>
+            <button id="clearButton" type="button" data-i18n="clearButton">Clear</button>
           </div>
         </header>
 
@@ -30,27 +30,28 @@
           <textarea
             id="promptInput"
             rows="4"
+            data-i18n-placeholder="promptPlaceholder"
             placeholder="Describe the situation or ask the oracle a question..."
           ></textarea>
           <div class="panel-actions">
-            <div class="certainty" aria-label="Certainty rating">
-              <span>Certainty</span>
+            <div class="certainty" data-i18n-aria="certaintyAria" aria-label="Certainty rating">
+              <span data-i18n="certaintyLabel">Certainty</span>
               <div id="certaintyDots" class="certainty-dots">
                 <i></i><i></i><i></i><i></i>
               </div>
             </div>
-            <button id="submitButton" type="submit">Ask Oracle</button>
+            <button id="submitButton" type="submit" data-i18n="submitButton">Ask Oracle</button>
           </div>
         </form>
       </section>
 
-      <aside class="reading-pane" aria-label="Oracle reading">
+      <aside class="reading-pane" data-i18n-aria="readingPaneAria" aria-label="Oracle reading">
         <div class="reading-title">
-          <span>Reading</span>
-          <button id="copyButton" type="button">Copy</button>
+          <span data-i18n="readingTitle">Reading</span>
+          <button id="copyButton" type="button" data-i18n="copyButton">Copy</button>
         </div>
         <article id="readingOutput">
-          <p class="muted">The reading will appear here as the oracle speaks.</p>
+          <p class="muted" data-i18n="readingPlaceholder">The reading will appear here as the oracle speaks.</p>
         </article>
       </aside>
     </main>
@@ -59,12 +60,12 @@
       <div class="picker-shell">
         <header class="picker-head">
           <div>
-            <span id="pickerPosition">Choose card</span>
-            <h2 id="pickerTitle">Deck</h2>
+            <span id="pickerPosition" data-i18n="chooseCard">Choose card</span>
+            <h2 id="pickerTitle" data-i18n="deckTitle">Deck</h2>
           </div>
-          <button id="pickerClose" type="button" aria-label="Close">Close</button>
+          <button id="pickerClose" type="button" data-i18n="closeButton" data-i18n-aria="closeAria" aria-label="Close">Close</button>
         </header>
-        <input id="pickerSearch" type="search" placeholder="Search cards or tags..." />
+        <input id="pickerSearch" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="Search cards or tags..." />
         <div id="pickerGrid" class="picker-grid"></div>
       </div>
     </dialog>

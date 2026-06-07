@@ -5,9 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-
-ROOT = Path(__file__).resolve().parent.parent
-SPREADS_DIR = ROOT / "data" / "spreads"
+from .config import ROOT, app_language
 
 
 @dataclass(frozen=True)
@@ -81,11 +79,16 @@ def build_slot(key: str, item: dict[str, Any]) -> SpreadSlot:
 
 
 def load_spreads() -> list[Spread]:
+    spreads_dir = spreads_dir_for_language()
     spreads = [
         Spread.from_toml(path)
-        for path in sorted(SPREADS_DIR.glob("*.toml"))
+        for path in sorted(spreads_dir.glob("*.toml"))
     ]
     return sorted(spreads, key=lambda spread: (spread.order, spread.name))
+
+
+def spreads_dir_for_language() -> Path:
+    return ROOT / "data" / "spreads" / app_language()
 
 
 SPREADS = load_spreads()

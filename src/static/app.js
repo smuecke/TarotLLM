@@ -1,3 +1,5 @@
+import { applyStaticText, setLanguage, t } from "./i18n.js";
+
 let cards = [];
 let cardsByKey = new Map();
 let spreads = [];
@@ -33,6 +35,8 @@ async function init() {
   const cardsPayload = await cardsResponse.json();
   const spreadsPayload = await spreadsResponse.json();
   deck = cardsPayload.deck || deck;
+  setLanguage(deck.language);
+  applyStaticText();
   cards = cardsPayload.cards;
   spreads = spreadsPayload.spreads || [];
   currentSpread = spreads[0] || null;
@@ -53,7 +57,7 @@ function defaultKeysForSpread(spread) {
 
 function render() {
   if (!currentSpread) {
-    spreadHint.textContent = "No spreads found.";
+    spreadHint.textContent = t("noSpreads");
     spreadBoard.innerHTML = "";
     submitButton.disabled = true;
     randomButton.disabled = true;
@@ -77,7 +81,7 @@ function render() {
     const button = document.createElement("button");
     button.className = "card-button";
     button.type = "button";
-    button.title = "Left click cycles cards. Right click opens the deck chooser.";
+    button.title = t("cardButtonTitle");
     button.addEventListener("click", () => cycleCard(index));
     button.addEventListener("contextmenu", (event) => {
       event.preventDefault();
@@ -116,8 +120,8 @@ function openPicker(index) {
   if (!currentSpread) return;
   pickerIndex = index;
   const position = currentSpread.positions[index];
-  pickerPosition.textContent = position ? position.name : "Choose card";
-  pickerTitle.textContent = deck.name || "Deck";
+  pickerPosition.textContent = position ? position.name : t("chooseCard");
+  pickerTitle.textContent = deck.name || t("deckTitle");
   pickerSearch.value = "";
   renderPicker();
   cardPicker.showModal();
@@ -170,7 +174,7 @@ async function dealRandom() {
 
 function clearReading() {
   readingText = "";
-  readingOutput.innerHTML = '<p class="muted">The reading will appear here as the oracle speaks.</p>';
+  readingOutput.innerHTML = `<p class="muted">${t("readingPlaceholder")}</p>`;
   setCertainty(0);
 }
 
@@ -198,7 +202,7 @@ async function askOracle(event) {
   submitButton.disabled = true;
   readingText = "";
   setCertainty(0);
-  readingOutput.innerHTML = '<p class="muted">Listening...</p>';
+  readingOutput.innerHTML = `<p class="muted">${t("listening")}</p>`;
   const userContext = Intl.DateTimeFormat().resolvedOptions();
 
   const body = {
@@ -232,7 +236,7 @@ async function askOracle(event) {
       renderReading();
     }
   } catch (error) {
-    readingOutput.innerHTML = `<p class="muted">The oracle could not answer: ${String(error.message || error)}</p>`;
+    readingOutput.innerHTML = `<p class="muted">${t("oracleError")} ${String(error.message || error)}</p>`;
   } finally {
     submitButton.disabled = false;
   }
@@ -242,7 +246,7 @@ function renderReading() {
   const match = readingText.match(/\[\[CERTAINTY:(\d)\]\]/);
   const visibleText = readingText.replace(/\[\[CERTAINTY:\d\]\]/, "");
   if (match) setCertainty(Number(match[1]));
-  readingOutput.innerHTML = markdownish(visibleText.trim() || "Listening...");
+  readingOutput.innerHTML = markdownish(visibleText.trim() || t("listening"));
   readingOutput.scrollTop = readingOutput.scrollHeight;
 }
 
@@ -262,9 +266,9 @@ clearButton.addEventListener("click", () => {
 oracleForm.addEventListener("submit", askOracle);
 copyButton.addEventListener("click", async () => {
   await navigator.clipboard.writeText(readingText.replace(/\[\[CERTAINTY:\d\]\]/, "").trim());
-  copyButton.textContent = "Copied";
+  copyButton.textContent = t("copiedButton");
   setTimeout(() => {
-    copyButton.textContent = "Copy";
+    copyButton.textContent = t("copyButton");
   }, 1200);
 });
 pickerSearch.addEventListener("input", renderPicker);

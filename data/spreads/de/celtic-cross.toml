@@ -1,0 +1,66 @@
+[spread]
+id = "celtic-cross"
+name = "Keltisches Kreuz"
+description = "Eine ausführliche Legung mit zehn Karten für die gegenwärtige Lage, die kreuzende Spannung, Wurzeln, bewusste Ziele, Vergangenheit, nahe Zukunft, Selbstbild, Umfeld, Hoffnungen und Ängste sowie den wahrscheinlichen Ausgang."
+order = 40
+
+[slots.present]
+name = "Gegenwart"
+x = 40
+y = 48
+role = "Die gegenwärtige Situation, der zentrale Zustand oder die unmittelbare Lage der Frage."
+
+[slots.challenge]
+name = "Herausforderung"
+x = 40
+y = 48
+rot = "90deg"
+role = "Die kreuzende Herausforderung, der Druck, das Hindernis oder die Spannung, die etwas in Bewegung bringt."
+
+[slots.below]
+name = "Darunter"
+x = 40
+y = 76
+role = "Die unbewusste Wurzel, Grundlage, tiefe Ursache oder verborgene Basis der Angelegenheit."
+
+[slots.above]
+name = "Darüber"
+x = 40
+y = 20
+role = "Das bewusste Ziel, die sichtbare Möglichkeit, das Ideal oder das, was im Kopf gehalten wird."
+
+[slots.past]
+name = "Vergangenheit"
+x = 22
+y = 48
+role = "Die jüngere Vergangenheit, ein nachlassender Einfluss oder die Geschichte, die das aktuelle Muster geprägt hat."
+
+[slots.near_future]
+name = "Nahe Zukunft"
+x = 58
+y = 48
+role = "Die nahe Zukunft, ein herannahender Einfluss oder die nächste Entwicklung, die sich bereits formt."
+
+[slots.self]
+name = "Selbst"
+x = 78
+y = 82
+role = "Das Selbstbild der fragenden Person, ihre Haltung, Handlungsfähigkeit oder Art, der Situation zu begegnen."
+
+[slots.environment]
+name = "Umfeld"
+x = 78
+y = 61
+role = "Das Umfeld, andere Menschen, äußerer Druck oder das Feld um die fragende Person herum."
+
+[slots.hopes_fears]
+name = "Hoffnungen/Ängste"
+x = 78
+y = 40
+role = "Hoffnungen, Ängste, Erwartungen oder emotional aufgeladene Vorstellungen möglicher Ausgänge."
+
+[slots.outcome]
+name = "Ausgang"
+x = 78
+y = 19
+role = "Der wahrscheinliche Ausgang, die Lösung oder die Richtung, wenn das aktuelle Muster anhält."

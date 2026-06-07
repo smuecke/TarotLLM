@@ -1,14 +1,13 @@
 from __future__ import annotations
 
-import os
 import tomllib
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+from .config import ROOT, app_language, deck_name, load_env
 
-ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_DECK_PATH = ROOT / "data" / "decks" / "tarot.toml"
+load_env()
 
 
 @dataclass(frozen=True)
@@ -126,10 +125,7 @@ def replace_cards(deck: DivinationDeck, cards: list[DivinationCard]) -> Divinati
 
 
 def deck_path() -> Path:
-    configured = os.getenv("DECK_PATH")
-    if configured:
-        return Path(configured).expanduser().resolve()
-    return DEFAULT_DECK_PATH
+    return ROOT / "data" / "decks" / app_language() / f"{deck_name()}.toml"
 
 
 DECK = DivinationDeck.from_toml(deck_path())

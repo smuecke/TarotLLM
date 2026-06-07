@@ -1,0 +1,35 @@
+[spread]
+id = "relationship-mirror"
+name = "Beziehungsspiegel"
+description = "Eine Fünf-Karten-Legung für zwei Seiten einer Beziehung oder Dynamik, die Verbindung zwischen ihnen, das verborgene Wetter und die nächste Bewegung."
+order = 30
+
+[slots.you]
+name = "Du"
+x = 30
+y = 45
+role = "Die Seite der fragenden Person in der Beziehung, ihre Haltung, ihr Bedürfnis, ihre Projektion oder ihr Beitrag."
+
+[slots.other]
+name = "Gegenüber"
+x = 70
+y = 45
+role = "Die Seite der anderen Person oder Gegenkraft, ihre Haltung, ihr Bedürfnis, ihre Projektion oder ihr Beitrag."
+
+[slots.bond]
+name = "Verbindung"
+x = 50
+y = 45
+role = "Die Verbindung selbst, also das, was zwischen den beiden Seiten entsteht."
+
+[slots.hidden]
+name = "Verborgenes"
+x = 50
+y = 22
+role = "Das verborgene Wetter, ein unausgesprochener Einfluss, ein unbewusstes Muster oder eine unsichtbare emotionale Bedingung."
+
+[slots.next]
+name = "Nächster Schritt"
+x = 50
+y = 72
+role = "Die nächste Bewegung, eine handlungsnahe Entwicklung oder die kurzfristige Richtung der Dynamik."

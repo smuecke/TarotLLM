@@ -1,0 +1,23 @@
+[spread]
+id = "past-present-future"
+name = "Vergangenheit, Gegenwart & Zukunft"
+description = "Drei Karten für Vergangenheit, Gegenwart und Zukunft; sie können auch als Aspekte oder Kräfte gelesen werden, deren Einfluss nachlässt, gerade seinen Höhepunkt hat oder zunimmt."
+order = 10
+
+[slots.past]
+name = "Vergangenheit"
+x = 28
+y = 49
+role = "Die Vergangenheit, ein nachlassender Aspekt oder eine Kraft, deren Einfluss abnimmt."
+
+[slots.present]
+name = "Gegenwart"
+x = 50
+y = 49
+role = "Die Gegenwart, eine Kraft, deren Einfluss gerade dominiert."
+
+[slots.future]
+name = "Zukunft"
+x = 72
+y = 49
+role = "Die Zukunft, ein zunehmender Aspekt oder eine Kraft, deren Einfluss wächst."

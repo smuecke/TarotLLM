@@ -1,0 +1,36 @@
+[spread]
+id = "compass"
+name = "Compass"
+description = "Five cards forming a compass for orientation, priority, changing influence, and central blessing."
+order = 25
+
+[slots.north]
+name = "North"
+x = 50
+y = 20
+role = "The compass needle points north: This aspect is worth orienting yourself toward."
+
+[slots.east]
+name = "East"
+x = 72
+y = 50
+role = "The sun rises in the east: This aspect is gaining strength and influence."
+
+[slots.south]
+name = "South"
+x = 50
+y = 80
+role = "The sun burns hottest in the south: This aspect is currently most important."
+
+[slots.west]
+name = "West"
+x = 28
+y = 50
+role = "The sun sets in the west: This aspect is losing strength and influence."
+
+[slots.center]
+name = "Center"
+x = 50
+y = 50
+rot = "90deg"
+role = "This aspect may be a blessing or central gift."

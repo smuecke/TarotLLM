@@ -72,6 +72,19 @@ button:disabled {
 
 select {
   padding: 0 2rem 0 0.7rem;
+  color-scheme: dark;
+  background-color: #17130f;
+}
+
+select option {
+  background-color: #17130f;
+  color: var(--ink);
+}
+
+select option:checked,
+select option:hover {
+  background-color: #3a2c16;
+  color: var(--ink);
 }
 
 .app-shell {

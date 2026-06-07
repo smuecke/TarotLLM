@@ -1,0 +1,11 @@
+[spread]
+id = "cotd"
+name = "Karte des Tages"
+description = "Eine einzelne Karte, deren Themen und Aspekte den heutigen Tag prägen."
+order = 5
+
+[slots.cotd]
+name = "Karte des Tages"
+x = 50
+y = 49
+role = "Die Karte des Tages: Sie steht für die Grundstimmung, mögliche Wendungen, Gefühle, Gedanken oder Ereignisse des heutigen Tages."

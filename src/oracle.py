@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import asyncio
 import json
-import locale
 import os
 import re
 from datetime import datetime, timezone
@@ -16,25 +15,101 @@ from pydantic_ai.capabilities.web_search import WebSearch
 from pydantic_ai.models.openai import OpenAIResponsesModel
 
 from .cards import CARD_BY_KEY, DECK, DivinationCard
+from .config import ROOT, load_env
 
 
-ROOT = Path(__file__).resolve().parent.parent
 LOGS_DIR = ROOT / "logs"
-SYSTEM_PROMPT = (
-    "You are a mystical but grounded Oracle that reads and interprets fortune-telling "
-    "cards, mainly Tarot. You receive a spread of cards with information about each "
-    "card and its role within the spread. Moreover, you receive input from a user, "
-    "possibly consisting of a question or background info about their situation. "
-    "Interpret the cards with care, do not claim certainty about facts you cannot "
-    "know, and do not present the reading as medical, legal, financial, or "
-    "safety-critical advice. Return one continuous reading that feels like a spoken "
-    "oracle transcript, not a report, outline, or card-by-card list. Mention cards "
-    "and their spread positions naturally and colloquially, weaving them into the "
-    "flow instead of using headings such as 'Past - The Devil' or 'Future - Six of "
-    "Wands'. Do not create a separate answer section. If possible, let a concrete "
-    "answer emerge within the same mystical, grounded prose. Answer in the user's "
-    "language. If the user did not write anything, use the language of the deck."
-)
+SYSTEM_PROMPTS = {
+    "English": (
+        "You are a mystical but grounded Oracle that reads and interprets "
+        "fortune-telling cards, mainly Tarot. You receive a spread of cards with "
+        "information about each card and its role within the spread. Moreover, you "
+        "receive input from a user, possibly consisting of a question or background "
+        "info about their situation. Interpret the cards with care, do not claim "
+        "certainty about facts you cannot know, and do not present the reading as "
+        "medical, legal, financial, or safety-critical advice. Return one continuous "
+        "reading that feels like a spoken oracle transcript, not a report, outline, "
+        "or card-by-card list. Mention cards and their spread positions naturally "
+        "and colloquially, weaving them into the flow instead of using headings such "
+        "as 'Past - The Devil' or 'Future - Six of Wands'. Do not create a separate "
+        "answer section. If possible, let a concrete answer emerge within the same "
+        "mystical, grounded prose. Answer in the user's language. If the user did "
+        "not write anything, use the language of the deck. If you need more info, "
+        "use the web search tool, if available."
+    ),
+    "German": (
+        "Du bist ein mystisches, weises, aber bodenständiges Orakel, das Wahrsagekarten "
+        "interpretiert, vor allem Tarot. Du erhältst als Eingabe ein Deck, ein Legesystem, "
+        "und die konkreten gezogenen Karten plus Infos und ihre Rollen innerhalb "
+        "des Legesystems. Außerdem erhältst du eine Eingabe von einer Person, "
+        "möglicherweise eine Frage, oder Hintergrundinformationen zu ihrer Situation. "
+        "Deute die Karten sorgfältig mit Bezug auf die Person in etwa 100 bis 300 "
+        "Wörtern. Betrachte die Karten nicht nur isoliert, sondern versuche, Verbindungen "
+        "zu ziehen und eine ganzheitliche Deutung zu finden, "
+        "in der alle Karten zusammenspielen um eine Wahrheit zu enthüllen. "
+        "Behaupte nicht, sicher zu sein bei Dingen, die du nicht wissen kannst, "
+        "und stelle die Deutung nicht als medizinischen, juristischen, finanziellen "
+        "oder sicherheitskritischen Rat dar. Gib eine einzige zusammenhängende Deutung "
+        "als Fließtext zurück, die sich wie ein gesprochenes Orakel anfühlt. Nutze "
+        "keine Textstrukturierung wie Überschriften oder Listen. Wo immer es sinnvoll "
+        "ist, lass konkrete Karten und ihre Funktionen in der aktuellen Legung natürlich "
+        "einfließen und erläutere sie. Wenn die Person eine Frage gestellt hat, "
+        "versuch, eine Antwort zu geben, ebenfalls im Fließtext. Schreibe in der "
+        "Sprache der fragenden Person. Wenn sie nichts geschrieben hat, verwende "
+        "die Sprache des Decks. Wenn du mehr Informationen brauchst, nutze das Websuchwerkzeug, "
+        "sofern es verfügbar ist. Gib außerdem eine Einschätzung zurück, wie sicher oder eindeutig "
+        "deine Deutung ist (1: sehr unsicher/unklar, bis 4: sehr sicher/eindeutig)."
+    ),
+}
+
+PROMPT_LABELS = {
+    "English": {
+        "current_context": "Current context",
+        "current_date": "Current date",
+        "current_time": "Current time",
+        "day_of_week": "Day of the week",
+        "time_zone": "Time zone",
+        "spread": "Spread",
+        "description": "Description",
+        "cards_and_context": "Cards and context",
+        "deck": "Deck",
+        "language": "Language",
+        "drawing": "Drawing",
+        "visual": "Visual",
+        "interpretation": "Interpretation",
+        "role": "Role within the spread",
+        "relevant": "Relevant information for this spread",
+        "user_input": "User input",
+        "unknown": "Unknown",
+        "no_role": "No role supplied.",
+        "no_relevant": "No shared tag context supplied.",
+        "no_description": "No spread description supplied.",
+        "no_user_input": "No user input supplied.",
+    },
+    "German": {
+        "current_context": "Aktueller Kontext",
+        "current_date": "Aktuelles Datum",
+        "current_time": "Aktuelle Uhrzeit",
+        "day_of_week": "Wochentag",
+        "time_zone": "Zeitzone",
+        "spread": "Legesystem",
+        "description": "Beschreibung",
+        "cards_and_context": "Karten und Infos",
+        "deck": "Deck",
+        "language": "Sprache",
+        "drawing": "Legung",
+        "visual": "Bildbeschreibung",
+        "interpretation": "Bedeutung",
+        "role": "Rolle im Legesystem",
+        "relevant": "Relevante Informationen für diese Legung",
+        "user_input": "Eingabe der Person",
+        "unknown": "Unbekannt",
+        "no_role": "Keine Rolle angegeben.",
+        "no_relevant": "Kein gemeinsamer Tag-Kontext",
+        "no_description": "Keine Beschreibung",
+        "no_user_input": "Keine Eingabe",
+    },
+}
 
 
 class SpreadCard(BaseModel):
@@ -46,7 +121,6 @@ class SpreadCard(BaseModel):
 class ReadingRequest(BaseModel):
     spread_name: str = Field(alias="spreadName")
     spread_description: str = Field(default="", alias="spreadDescription")
-    locale: str = ""
     time_zone: str = Field(default="", alias="timeZone")
     prompt: str
     cards: list[SpreadCard]
@@ -55,18 +129,6 @@ class ReadingRequest(BaseModel):
 class ReadingResult(BaseModel):
     reading: str
     certainty: int = Field(ge=1, le=4)
-
-
-def load_env() -> None:
-    env_path = ROOT / ".env"
-    if not env_path.exists():
-        return
-    for line in env_path.read_text(encoding="utf-8").splitlines():
-        line = line.strip()
-        if not line or line.startswith("#") or "=" not in line:
-            continue
-        key, value = line.split("=", 1)
-        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
 
 
 def prompt_logging_enabled() -> bool:
@@ -85,18 +147,45 @@ def openai_responses_model_name() -> str:
     return model_name
 
 
-def configured_locale() -> str:
-    for key in ("APP_LOCALE", "LC_TIME", "LC_ALL", "LANG"):
-        value = os.getenv(key, "").strip()
-        if value and value.upper() not in {"C", "POSIX", "C.UTF-8"}:
-            return value
-    process_locale = locale.setlocale(locale.LC_TIME, None) or ""
-    if process_locale and process_locale.upper() not in {"C", "POSIX", "C.UTF-8"}:
-        return process_locale
-    return "Unknown"
+def deck_language() -> str:
+    language = (DECK.language or "").strip().lower()
+    if language.startswith(("de", "ger")):
+        return "German"
+    return "English"
 
 
-def current_context(*, request_locale: str = "", request_time_zone: str = "") -> str:
+def prompt_labels() -> dict[str, str]:
+    return PROMPT_LABELS[deck_language()]
+
+
+def system_prompt() -> str:
+    return SYSTEM_PROMPTS[deck_language()]
+
+
+def display_deck_language() -> str:
+    if deck_language() == "German":
+        return "Deutsch"
+    return DECK.language or prompt_labels()["unknown"]
+
+
+def weekday_name(now: datetime) -> str:
+    if deck_language() == "German":
+        names = [
+            "Montag",
+            "Dienstag",
+            "Mittwoch",
+            "Donnerstag",
+            "Freitag",
+            "Samstag",
+            "Sonntag",
+        ]
+        return names[now.weekday()]
+    return now.strftime("%A")
+
+
+def current_context(
+    *, labels: dict[str, str], request_time_zone: str = ""
+) -> str:
     time_zone_name = request_time_zone.strip()
     if time_zone_name:
         try:
@@ -108,13 +197,11 @@ def current_context(*, request_locale: str = "", request_time_zone: str = "") ->
         now = datetime.now().astimezone()
         time_zone_name = now.tzinfo.tzname(now) if now.tzinfo else "Unknown"
 
-    locale_name = request_locale.strip() or configured_locale()
     return (
-        f"Current date: {now.date().isoformat()}\n"
-        f"Current time: {now.strftime('%H:%M:%S %Z%z')}\n"
-        f"Day of the week: {now.strftime('%A')}\n"
-        f"Time zone: {time_zone_name}\n"
-        f"Locale: {locale_name}"
+        f"{labels['current_date']}: {now.date().isoformat()}\n"
+        f"{labels['current_time']}: {now.strftime('%H:%M:%S %Z%z')}\n"
+        f"{labels['day_of_week']}: {weekday_name(now)}\n"
+        f"{labels['time_zone']}: {time_zone_name}"
     )
 
 
@@ -204,45 +291,49 @@ def relevant_tag_lines(resolved: list[tuple[SpreadCard, DivinationCard]]) -> lis
     return lines
 
 
-def drawing_lines(resolved: list[tuple[SpreadCard, DivinationCard]]) -> list[str]:
+def drawing_lines(
+    resolved: list[tuple[SpreadCard, DivinationCard]], labels: dict[str, str]
+) -> list[str]:
     lines: list[str] = []
     for item, card in resolved:
         tags = ", ".join(card.tag_labels) if card.tag_labels else ", ".join(card.tags)
         lines.extend(
             [
                 f"- {item.position}: {card.name}{f' [{tags}]' if tags else ''}",
-                f"Visual: {card.visual}",
-                f"Interpretation: {card.meaning}",
-                f"Role within the spread: {item.role or 'No role supplied.'}",
+                f"{labels['visual']}: {card.visual}",
+                f"{labels['interpretation']}: {card.meaning}",
+                f"{labels['role']}: {item.role or labels['no_role']}",
             ]
         )
     return lines
 
 
 def card_context(cards: list[SpreadCard]) -> tuple[list[tuple[SpreadCard, DivinationCard]], str]:
+    labels = prompt_labels()
     resolved = resolve_cards(cards)
-    drawing = "\n".join(drawing_lines(resolved))
-    relevant = "\n".join(relevant_tag_lines(resolved)) or "No shared tag context supplied."
+    drawing = "\n".join(drawing_lines(resolved, labels))
+    relevant = "\n".join(relevant_tag_lines(resolved)) or labels["no_relevant"]
     context = (
-        f"Deck: {DECK.name}\n"
-        f"Language: {DECK.language or 'Unknown'}\n\n"
-        f"Drawing:\n{drawing}\n\n"
-        f"Relevant information for this spread:\n{relevant}"
+        f"{labels['deck']}: {DECK.name}\n"
+        f"{labels['language']}: {display_deck_language()}\n\n"
+        f"{labels['drawing']}:\n{drawing}\n\n"
+        f"{labels['relevant']}:\n{relevant}"
     )
     return resolved, context
 
 
 def build_user_prompt(request: ReadingRequest) -> str:
+    labels = prompt_labels()
     _, context = card_context(request.cards)
     return (
-        f"Current context:\n"
-        f"{current_context(request_locale=request.locale, request_time_zone=request.time_zone)}\n\n"
-        f"Spread: {request.spread_name}\n"
-        f"Description: {request.spread_description or 'No spread description supplied.'}\n\n"
-        f"Cards and context:\n"
+        f"{labels['current_context']}:\n"
+        f"{current_context(labels=labels, request_time_zone=request.time_zone)}\n\n"
+        f"{labels['spread']}: {request.spread_name}\n"
+        f"{labels['description']}: {request.spread_description or labels['no_description']}\n\n"
+        f"{labels['cards_and_context']}:\n"
         f"{context}\n\n"
-        f"User input:\n"
-        f"{request.prompt.strip() or 'No user input supplied.'}"
+        f"{labels['user_input']}:\n"
+        f"{request.prompt.strip() or labels['no_user_input']}"
     )
 
 
@@ -265,6 +356,7 @@ async def generate_reading(request: ReadingRequest) -> ReadingResult:
 async def generate_with_llm(request: ReadingRequest) -> ReadingResult:
     model_name = openai_responses_model_name()
     search_enabled = web_search_enabled()
+    active_system_prompt = system_prompt()
     capabilities = (
         [WebSearch(native=True, local=False, search_context_size="medium", max_uses=3)]
         if search_enabled
@@ -274,7 +366,7 @@ async def generate_with_llm(request: ReadingRequest) -> ReadingResult:
     agent = Agent(
         model,
         output_type=ReadingResult,
-        system_prompt=SYSTEM_PROMPT,
+        system_prompt=active_system_prompt,
         capabilities=capabilities,
     )
     user_prompt = build_user_prompt(request)
@@ -282,7 +374,7 @@ async def generate_with_llm(request: ReadingRequest) -> ReadingResult:
     write_llm_log(
         path=log_path,
         model_name=model_name,
-        system_prompt=SYSTEM_PROMPT,
+        system_prompt=active_system_prompt,
         user_prompt=user_prompt,
         web_search=search_enabled,
     )
